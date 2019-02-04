@@ -1,0 +1,134 @@
+* {
+    margin:0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    color: #555;
+    font-family: 'Lato', sans-serif;
+    font-size: 120%;
+    font-style: normal;
+    font-stretch: normal;
+    text-rendering: optimizeLegibility;
+	overflow-x: hidden;
+    letter-spacing: normal;
+}
+
+@media only screen and (max-width:480px) {
+    .row {
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    html{
+        background-color: #ffffff;
+    }
+
+    body {
+        background-color: #f7f7f7;
+        max-width: 480px;
+        height: 640px;
+        margin:auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding-top: 5%;
+        background-position: right;
+        background-size: cover;
+    }
+
+    .hd {
+        text-align: center;
+    }
+
+    .logo {
+        width: 25%;
+        border-radius: 100%;
+        margin-left: 5vw;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+        float: left;
+    }
+    
+    .DSChd {
+        font-size: 5vw; 
+        color: rgb(83, 83, 83);
+    }
+
+    .dsc {
+        float: left;
+        margin-right: 10vw;
+        margin-left: 5vw;
+        margin-top: 12vw;
+        margin-bottom: 12vw;
+        font-size: 3vw;
+        color: rgb(107, 107, 107);
+    }
+
+    .dscev {
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        margin-left: 5vw;
+        font-size: 4vw;
+    }
+
+    i {
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        margin: 3px;
+    }
+
+    .down {
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+
+    .arrowbig {
+        border-width: 0 0.8vw 0.8vw 0;
+        padding: 1.5vw;
+    }
+
+    .right {
+        transform: rotate(315deg)
+    }
+    
+    .rtarrow{
+        padding-right: 4vw; 
+        padding-top: 6vw;
+    }
+
+    .evphoto {
+        width: 20vw;
+        float: left;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .evhd {
+        font-size: 4vw; 
+        color: rgb(83, 83, 83);
+    }
+    
+    .evdet {
+        margin-top: 6vw;
+        float: left;
+        color: rgb(118, 117, 117);
+        font-size: 3vw;
+        margin-left: 2vw;
+    }
+
+    .evcard {
+        height: 20vw;
+        display: block;
+        padding: 0px;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        background-color: #ffffff;
+    }
+}
+
