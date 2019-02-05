@@ -130,6 +130,41 @@ html, body {
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
         background-color: #ffffff;
     }
+    
+    .srphoto {
+        width: 80vw;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    
+    .srhd {
+        font-size: 4vw; 
+        color: rgb(83, 83, 83);
+    }
+    
+    .srdet {
+        margin-top: 1vw;
+        color: rgb(118, 117, 117);
+        font-size: 3vw;
+        margin-left: 4vw;
+        float: left;
+    }
+    
+    .srcard {
+        height: 95vw;
+        display: block;
+        padding: 0px;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        background-color: #ffffff;
+    }
+    
+    .srrtarrow{
+        margin-top: 1.5vw;
+        margin-right: 4vw;
+    }
 }
 
 @media only screen and (min-width:480px) and (max-width:1200px) {
