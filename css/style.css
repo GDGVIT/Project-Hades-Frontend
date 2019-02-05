@@ -41,6 +41,12 @@ html, body {
     .hd {
         text-align: center;
     }
+    
+    .hd2 {
+        font-size: 6vw;
+        text-align: center;
+        margin-bottom: 4vw;
+    }
 
     .logo {
         width: 25%;
@@ -67,8 +73,8 @@ html, body {
     }
 
     .dscev {
-        margin-top: 2vw;
-        margin-bottom: 2vw;
+        margin-top: 4vw;
+        margin-bottom: 4vw;
         margin-left: 5vw;
         font-size: 4vw;
     }
@@ -129,6 +135,8 @@ html, body {
         display: block;
         padding: 0px;
         margin-left: 5vw;
+        margin-bottom: 4vw;
+        margin-top: 2vw;
         margin-right: 5vw;
         border-radius: 10px;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
@@ -160,6 +168,7 @@ html, body {
         display: block;
         padding: 0px;
         margin-left: 10vw;
+        margin-bottom: 2vw;
         margin-right: 10vw;
         border-radius: 10px;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
@@ -167,7 +176,7 @@ html, body {
     }
     
     .srrtarrow{
-        margin-top: 1.5vw;
+        margin-top: 0.5vw;
         margin-right: 4vw;
     }
 }
@@ -193,9 +202,10 @@ html, body {
         background-size: cover;
     }
 
-    .hd {
+    .hd, .hd2 {
         text-align: center;
         font-size:4vw;
+        margin-bottom: 4vw;
     }
 
     .logo {
@@ -224,8 +234,8 @@ html, body {
 
 
     .dscev {
-        margin-top: 2vw;
-        margin-bottom: 2vw;
+        margin-top: 4vw;
+        margin-bottom: 4vw;
         margin-left: 15vw;
 /*        font-size: 4vw;*/
     }
@@ -288,7 +298,8 @@ html, body {
         margin-left: 15vw;
         margin-right: 15vw;
         border-radius: 10px;
-        margin-bottom: 2vw;
+        margin-bottom: 4vw;
+        margin-top: 2vw;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
         background-color: #ffffff;
     }
@@ -352,9 +363,10 @@ html, body {
         background-size: cover;
     }
 
-    .hd {
+    .hd, .hd2 {
         text-align: center;
         font-size:4vw;
+        margin-bottom: 4vw;
     }
 
     .logo {
@@ -383,8 +395,8 @@ html, body {
 
 
     .dscev {
-        margin-top: 2vw;
-        margin-bottom: 2vw;
+        margin-top: 4vw;
+        margin-bottom: 4vw;
         margin-left: 15vw;
 /*        font-size: 4vw;*/
     }
@@ -447,7 +459,8 @@ html, body {
         margin-left: 15vw;
         margin-right: 15vw;
         border-radius: 10px;
-        margin-bottom: 2vw;
+        margin-bottom: 4vw;
+        margin-top: 2vw;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
         background-color: #ffffff;
     }
