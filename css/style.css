@@ -439,4 +439,41 @@ html, body {
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
         background-color: #ffffff;
     }
+    
+    .srphoto {
+        width: 48vw;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    
+    .srhd {
+        font-size: 2vw; 
+        color: rgb(83, 83, 83);
+    }
+    
+    .srdet {
+        margin-top: 1vw;
+        color: rgb(118, 117, 117);
+        font-size: 1.2vw;
+        margin-left: 4vw;
+        float: left;
+    }
+    
+    .srcard {
+        height: 36vw;
+        width: 48vw;
+        display: block;
+        padding: 0px;
+        margin-left: 15vw;
+        margin-bottom: 2vw;
+        margin-right: 15vw;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        background-color: #ffffff;
+    }
+    
+    .srrtarrow{
+        margin-top: 1.5vw;
+        margin-right: 4vw;
+    }
 }
