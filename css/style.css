@@ -95,6 +95,10 @@ html, body {
         transform: rotate(315deg)
     }
     
+    .left {
+        transform: rotate(135deg);
+    }
+    
     .rtarrow{
         padding-right: 4vw; 
         padding-top: 6vw;
@@ -246,6 +250,10 @@ html, body {
 
     .right {
         transform: rotate(315deg)
+    }
+    
+    .left {
+        transform: rotate(135deg);
     }
     
     .rtarrow{
@@ -401,6 +409,10 @@ html, body {
 
     .right {
         transform: rotate(315deg)
+    }
+    
+    .left {
+        transform: rotate(135deg);
     }
     
     .rtarrow{
