@@ -775,7 +775,7 @@ input:not + label {
         border: solid 0.1vw #8e8e8e;
     }
     input:placeholder-shown + label {
-        font-size: 0.9vw;
+        font-size: 0.8vw;
         margin-left: 24vw;
         transform: translate(0, 3.1vw) scale(1.5);
     }
