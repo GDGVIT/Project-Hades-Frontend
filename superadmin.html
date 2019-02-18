@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+<!--        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/grid.css">
@@ -19,15 +20,28 @@
             <p class="dscev">Clubs and chapters <i class="arrow down"></i></p> 
         </div>
         <div class="row">
-            <a href="adminhome.html" style="text-decoration: none;">
+            <a href="adminhome.html?clubName=DSC" style="text-decoration: none;">
                 <div class="evcard" href="adminhome.html">
                     <img class="evphoto" src="grey.jpg">
                     <div class="evdet">
-                    <strong class="evhd">Chapter Name</strong><br>
+                    <strong class="evhd">DSC</strong><br>
                     Mar 31, 2018
                     </div>
                 </div>
             </a>
         </div>
+<!--
+        <script>
+            $(document).ready(function () {
+                $("#button").click(function () {
+                    $.ajax({url : "localhost", data : JSON.stringify({request}), method="POST", success : function(result) {
+                        
+                        $("#span").html(result.name)
+                    }})
+                })    
+            
+            } )
+        </script>
+-->
     </body>
 </html>

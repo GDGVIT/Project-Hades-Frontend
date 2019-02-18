@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/grid.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <title>HADES</title>
     </head>
     <body>
@@ -16,19 +17,49 @@
             </div>
         </div>
         <div class="row">
-            <p class="dscev">Events <i class="arrow down"></i></p> 
+            <button id="evload"><p class="dscev">Events <i class="arrow down"></i></p></button> 
         </div>
-        <div class="row">
-            <div class="evcard">
-                <img class="evphoto" src="lm5.jpg">
-                <div class="evdet">
-                <strong class="evhd">Event name</strong><br>
-                Date of the event
-                </div>
-                <div class="rtarrow" style="float: right;">
-                    <i class="arrowbig right"></i>
-                </div>
-            </div>
-        </div>
+        <div id="hola"></div>
+        <div class="row" id="addev"></div>
+        <script type="text/javascript">
+            var queryString = decodeURIComponent(window.location.search);
+            queryString = queryString.substring(1);
+            var queries = queryString.split("=");
+//            console.log(queries);
+            var input = JSON.stringify({
+                "query": {
+                    "key": "clubName",
+                    "value": queries[1],
+                    "specific": ""
+                }
+            })
+            count = 0
+            document.getElementById( "addev" ).innerHTML = '<a href="addev.html?clubName='+queries[1]+'"><button class="sub">Add Event</button></a>'
+            $(document).ready(function (){
+                $("#evload").click(function() {
+                    count+=1;
+                    if(count%2===1)
+                        {
+                            document.getElementById("hola").style.visibility = "visible";
+                    $.ajax({
+                        type: "POST",
+                        url: "http://206.189.133.125/api/v1/event/read-event",
+                        data:input
+                    }).done(function (data) {
+                        if (true) {
+                            var txt="";
+                            for (var i=0;i<data.rs.length; i++){
+                                var obj = data.rs[i];
+                                txt = txt + '<a href="events.html?clubName='+queries[1]+'&eventName=' + obj.name + '" style="text-decoration: none;"><div class="row"><div class="evcard"><img class="evphoto" src="lm5.jpg"><div class="evdet"><strong class="evhd">' + obj.name + '</strong><br>'+obj.fromDate+'</div><div class="rtarrow" style="float: right;"><i class="arrowbig right"></i></div></div></div></a>';
+                            }
+                            document.getElementById("hola").innerHTML= txt;
+                        }
+                    });
+                }
+                    else
+                        document.getElementById("hola").style.visibility="hidden";
+                })
+            }) 
+        </script>
     </body>
 </html>

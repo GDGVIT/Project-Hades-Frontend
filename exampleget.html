@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/grid.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>HADES</title>
+    </head>
+    <body>
+        <button id="load">lolol</button>
+        <div id="lyrics">
+        </div>
+        <script type="text/javascript">
+            var input = JSON.stringify({
+                "query": {
+                    "key": "clubName",
+                    "value": "GDG",
+                    "specific": "DEVFEST 2019"
+                }
+            })
+            $(document).ready(function (){
+                $("#load").click(function() {
+                    $.ajax({
+                        type: "POST",
+                        url: "http://68.183.80.71:8800/api/v1/event/read-event",
+                        data:input
+                    }).done(function (data) {
+                        console.log(data.rs[0]);
+                        if (true) {
+                            var txt="";
+                            for (var i=0;i<data.rs.length; i++){
+                                var obj = data.rs[i];
+                                console.log(obj.clubName);
+                                txt = txt + data.rs[i].name + ' <br> ';
+                                console.log(txt);
+                            }
+                            document.getElementById("lyrics").innerHTML= txt;
+                        }
+                    });
+                })
+            }) 
+//            function loadL() {
+//                var request = new XMLHttpRequest(); 
+//                request.onreadystatechange = function () {
+//                    console.log("hi");
+//                    if (this.readyState === 4 && this.status === 200) {
+//                        console.log(this.responseText);
+//                    }};
+//                    request.open('POST', 'http://68.183.80.71:8800/create-event');
+//                    request.send(input);
+//                    console.log("imhere");
+//            }
+        </script>
+    </body>
+</html>

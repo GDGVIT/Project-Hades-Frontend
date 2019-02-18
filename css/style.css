@@ -16,6 +16,12 @@ html, body {
     letter-spacing: normal;
 }
 
+#evload {
+    border: none;
+    color: inherit;
+    background-color: #f7f7f7;
+}
+
 @media only screen and (max-width:480px) {
     .row {
         max-width: 480px;
@@ -142,44 +148,7 @@ html, body {
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
         background-color: #ffffff;
     }
-    
-    .formcard {
-        display: block;
-        height: 11vw;
-        padding: 0px;
-        margin-left: 5vw;
-        margin-bottom: 6vw;
-        margin-top: 2vw;
-        margin-right: 5vw;
-        border-radius: 10px;
-        border: solid 0.5vw #2c7cff;
-    }
-    
-    .attr {
-        color: #2c7cff;
-        font-size: 4vw;
-        margin-left: 10vw;
-        background-color: #f7f7f7;
-        margin-top: -12vw;
-        width: 20vw;
-        text-align: center;
-/*        margin-right: 68vw;*/
-    }
-    
-    input[type=text] {
-        width: 100%;
-        padding: 2.5vw;
-        font-size: 4vw;
-        margin-bottom: 0vw;
-        border: none;
-        background-color: rgba(247, 247, 247, 0);
-    }
-    
-    input[type=submit] {
-        background-color: transparent;
-        border: none;
-    }
-    
+
     .sub {
         padding: 2vw;
         font-family: Lato, sans-serif;
@@ -187,7 +156,7 @@ html, body {
         border: none;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
         background-color: #ffffff;
-        margin-left: 5vw;
+        margin-left: 15vw;
         font-size: 4vw;
     }
     
@@ -306,8 +275,8 @@ html, body {
     }
 
     .arrowbig {
-        border-width: 0 0.5vw 0.5vw 0;
-        padding: 1vw;
+        border-width: 0 0.3vw 0.3vw 0;
+        padding: 0.8vw;
     }
 
     .right {
@@ -320,31 +289,31 @@ html, body {
     
     .rtarrow{
          padding-right: 4vw; 
-        padding-top: 6vw;
+        padding-top: 4vw;
     }
 
     .evphoto {
-        width: 16vw;
+        width: 11vw;
         float: left;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
     }
 
     .evdet {
-        margin-top: 5vw;
+        margin-top: 3vw;
         float: left;
         color: rgb(118, 117, 117);
-        font-size: 2vw;
+        font-size: 1.5vw;
         margin-left: 2vw;
     }
 
     .evhd {
-        font-size: 2.5vw; 
+        font-size: 2vw; 
         color: rgb(83, 83, 83);
     }
     
     .evcard {
-        height: 16vw;
+        height: 11vw;
         display: block;
         padding: 0px;
         margin-left: 15vw;
@@ -356,55 +325,17 @@ html, body {
         background-color: #ffffff;
     }
     
-    .formcard {
-        display: block;
-        height: 9vw;
-        padding: 0px;
-        margin-left: 15vw;
-        margin-bottom: 8vw;
-        margin-top: 2vw;
-        margin-right: 15vw;
-        border-radius: 10px;
-        border: solid 0.5vw #2c7cff;
-    }
-    
-    .attr {
-        color: #2c7cff;
-        font-size: 3vw;
-        margin-left: 10vw;
-        padding-left: 0.2vw;
-        background-color: #f7f7f7;
-        margin-top: -10vw;
-        width: 15vw;
-        text-align: center;
-/*        margin-right: 50vw;*/
-    }
-    
-    input[type=text] {
-        width: 100%;
-        padding: 2vw;
-        font-size: 3vw;
-        margin-bottom: 0vw;
-        border: none;
-        background-color: rgba(247, 247, 247,0);
-    }
-    
-    input[type=submit] {
-        background-color: transparent;
-        border: none;
-    }
-    
     .sub {
-        padding: 2vw;
+        padding: 1vw;
         font-family: Lato, sans-serif;
         border-radius: 10px;
         border: none;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
         background-color: #ffffff;
-        margin-left: 15vw;
-        margin-right: -5vw;
+        margin-left: 23vw;
+        margin-right: -15vw;
         margin-bottom: 5vw;
-        font-size: 3vw;
+        font-size: 2vw;
     }
     
     .sub input {
@@ -423,7 +354,7 @@ html, body {
     }
     
     .srdet {
-        margin-top: 1vw;
+        margin-top: 1.8vw;
         color: rgb(118, 117, 117);
         font-size: 2vw;
         margin-left: 4vw;
@@ -446,6 +377,10 @@ html, body {
     .srrtarrow{
         margin-top: 1.5vw;
         margin-right: 4vw;
+    }
+    
+    #evload p{
+        font-size: 1.8vw;
     }
 }
 
@@ -472,12 +407,12 @@ html, body {
 
     .hd, .hd2 {
         text-align: center;
-        font-size:4vw;
+        font-size:2.3vw;
         margin-bottom: 4vw;
     }
 
     .logo {
-        width: 12vw;
+        width: 8vw;
         border-radius: 100%;
         margin-left: 22vw;
         margin-top: 2vw;
@@ -491,12 +426,12 @@ html, body {
         margin-left: 5vw;
         margin-top: 4vw;
         margin-bottom: 4vw;
-        font-size: 2vw;
+        font-size: 1vw;
         color: rgb(107, 107, 107);
     }
     
     .DSChd {
-        font-size: 3vw; 
+        font-size: 2vw; 
         color: rgb(83, 83, 83);
     }
 
@@ -505,7 +440,6 @@ html, body {
         margin-top: 4vw;
         margin-bottom: 4vw;
         margin-left: 15vw;
-/*        font-size: 4vw;*/
     }
 
     i {
@@ -522,8 +456,8 @@ html, body {
     }
 
     .arrowbig {
-        border-width: 0 0.5vw 0.5vw 0;
-        padding: 1vw;
+        border-width: 0 0.2vw 0.2vw 0;
+        padding: 0.5vw;
     }
 
     .right {
@@ -536,31 +470,31 @@ html, body {
     
     .rtarrow{
          padding-right: 4vw; 
-        padding-top: 4vw;
+        padding-top: 2.5vw;
     }
 
     .evphoto {
-        width: 12vw;
+        width: 7vw;
         float: left;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
     }
 
     .evdet {
-        margin-top: 3vw;
+        margin-top: 1.5vw;
         float: left;
         color: rgb(118, 117, 117);
-        font-size: 2vw;
+        font-size: 1vw;
         margin-left: 2vw;
     }
 
     .evhd {
-        font-size: 2.5vw; 
+        font-size: 2vw; 
         color: rgb(83, 83, 83);
     }
     
     .evcard {
-        height: 12vw;
+        height: 7vw;
         display: block;
         padding: 0px;
         margin-left: 15vw;
@@ -578,16 +512,16 @@ html, body {
     }
     
     .sub {
-        padding: 1.5vw;
+        padding: 0.8vw;
         font-family: Lato, sans-serif;
         border-radius: 10px;
         border: none;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
         background-color: #ffffff;
-        margin-left: 15vw;
-        margin-right: -5vw;
+        margin-left: 23vw;
+        margin-right: -15vw;
         margin-bottom: 5vw;
-        font-size: 2vw;
+        font-size: 1.5vw;
     }
     
     .sub input {
@@ -595,7 +529,7 @@ html, body {
     }
     
     .srphoto {
-        width: 48vw;
+        width: 40vw;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
@@ -614,13 +548,13 @@ html, body {
     }
     
     .srcard {
-        height: 36vw;
-        width: 48vw;
+        height: 28vw;
+        width: 40vw;
         display: block;
         padding: 0px;
-        margin-left: 15vw;
+        margin-left: 20vw;
         margin-bottom: 2vw;
-        margin-right: 15vw;
+        margin-right: 20vw;
         border-radius: 10px;
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
         background-color: #ffffff;
@@ -630,41 +564,250 @@ html, body {
         margin-top: 1.5vw;
         margin-right: 4vw;
     }
+    
+    #evload p{
+        font-size: 1.5vw;
+    }
+}
+#load {
+    border: none;
+    background-color: white;
 }
 
-@media only screen and (min-width:1100px){
-    
-    .formcard {
-        display: block;
-        height: 6.5vw;
-        padding: 0px;
-        margin-left: 15vw;
-        margin-bottom: 6vw;
-        margin-top: 2vw;
-        margin-right: 15vw;
-        border-radius: 10px;
-        border: solid 0.5vw #2c7cff;
-    }
-    
-    .attr {
-        color: #2c7cff;
-        font-size: 2.5vw;
-        margin-left: 8vw;
-        padding-left: 0.2vw;
-        background-color: #f7f7f7;
-        margin-top: -7.2vw;
-        width: 15vw;
-        text-align: center;
-/*        margin-right: 53vw;*/
-    }
-    
-    input[type=text] {
-        width: 100%;
-        padding: 1.5vw;
+form {
+ margin: 2px 0;
+}
+ 
+.field {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1em;
+}
+
+label, input {
+  transition: all 0.2s;
+}
+
+input {
+    font-size: 3.5vw;
+    border: 0;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ccc;
+    font-family: inherit;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding-left: 2vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    cursor: text;
+    border-radius: 10px;
+    border: solid 0.4vw #8e8e8e;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    height: 10vw;
+}
+
+input:focus {
+  outline: 0;
+}
+
+label {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #8e8e8e;
+}
+
+input:placeholder-shown + label {
+    cursor: text;
+    color: #8e8e8e;
+    max-width: 66.66%;
+    padding:2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    font-size: 2vw;
+    margin-left: 17vw;
+    transform: translate(0, 8vw) scale(1.5);
+}
+
+::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+
+input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+input:not(:placeholder-shown) + label,
+input:focus + label {
+    transform: translate(0.2vw, 2vw) scale(1);
+    cursor: pointer;
+    background-color: #f7f7f7;
+    font-size: 3vw;
+    padding:2px;
+    margin-left: 17vw;
+    text-align: center;
+}
+
+.r1 input:not(:placeholder-shown) + label,
+.r1 input:focus + label {
+    width : 11vw;
+}
+.r2 input:not(:placeholder-shown) + label,
+.r2 input:focus + label {
+    width : 42vw;
+}
+.r3 input:not(:placeholder-shown) + label,
+.r3 input:focus + label {
+    width : 11.5vw;
+}
+.r4 input:not(:placeholder-shown) + label,
+.r4 input:focus + label {
+    width : 13vw;
+}
+
+input:focus  {
+    border: solid 0.5vw #2c7cff;
+}
+
+input:focus + label {
+    color: #2c7cff;
+}
+
+input:not + label {
+    color: #8f8f8f
+}
+
+@media only screen and (max-width:800px) and (min-width:480px){
+    input {
         font-size: 2vw;
-        margin-bottom: 0vw;
-        border: none;
-        background-color: rgba(247, 247, 247,0);
+        padding-top: 1.5vw;
+        padding-bottom: 1.5vw;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        height: 9vw;
     }
-    
+    input:placeholder-shown + label {
+        font-size: 1.5vw;
+        margin-left: 21vw;
+        transform: translate(0, 6.5vw) scale(1.5);
+    }
+    input:not(:placeholder-shown) + label,
+    input:focus + label {
+        transform: translate(4.5vw, 1.2vw) scale(1);
+        cursor: pointer;
+        font-size: 2vw;
+        padding:0.5px;
+        text-align: center;
+        margin-left: 17vw;
+    }
+    .r1 input:not(:placeholder-shown) + label,
+    .r1 input:focus + label {
+        width : 8vw;
+    }
+    .r2 input:not(:placeholder-shown) + label,
+    .r2 input:focus + label {
+        width : 28vw;
+    }
+    .r3 input:not(:placeholder-shown) + label,
+    .r3 input:focus + label {
+        width : 8vw;
+    }
+    .r4 input:not(:placeholder-shown) + label,
+    .r4 input:focus + label {
+        width : 8.5vw;
+    }
+}
+@media only screen and (min-width:800px) and (max-width:1250px){
+    input {
+        font-size: 1.5vw;
+        padding-top: 1.5vw;
+        padding-bottom: 1.5vw;
+        margin-left: 23vw;
+        margin-right: 23vw;
+        height: 7vw;
+        border: solid 0.2vw #8e8e8e;
+    }
+    input:placeholder-shown + label {
+        font-size: 1.2vw;
+        margin-left: 24vw;
+        transform: translate(0, 5vw) scale(1.5);
+    }
+    input:not(:placeholder-shown) + label,
+    input:focus + label {
+        transform: translate(7.2vw, 0.9vw) scale(1);
+        cursor: pointer;
+        font-size: 1.2vw;
+        padding:0.5px;
+        text-align: center;
+        margin-left: 17vw;
+    }
+    input:focus  {
+        border: solid 0.3vw #2c7cff;
+    }
+    .r1 input:not(:placeholder-shown) + label,
+    .r1 input:focus + label {
+        width : 5vw;
+    }
+    .r2 input:not(:placeholder-shown) + label,
+    .r2 input:focus + label {
+        width : 17vw;
+    }
+    .r3 input:not(:placeholder-shown) + label,
+    .r3 input:focus + label {
+        width : 5vw;
+    }
+    .r4 input:not(:placeholder-shown) + label,
+    .r4 input:focus + label {
+        width : 5.5vw;
+    }
+}
+@media only screen and (min-width:1250px){
+    input {
+        font-size: 1.2vw;
+        padding-top: 1.2vw;
+        padding-bottom: 1.2vw;
+        margin-left: 23vw;
+        margin-right: 23vw;
+        height: 4.2vw;
+        border: solid 0.1vw #8e8e8e;
+    }
+    input:placeholder-shown + label {
+        font-size: 0.9vw;
+        margin-left: 24vw;
+        transform: translate(0, 3.1vw) scale(1.5);
+    }
+    input:not(:placeholder-shown) + label,
+    input:focus + label {
+        transform: translate(7.2vw, 0.7vw) scale(1);
+        cursor: pointer;
+        font-size: 1vw;
+        padding:0.5px;
+        text-align: center;
+        margin-left: 17vw;
+    }
+    input:focus  {
+        border: solid 0.2vw #2c7cff;
+    }
+    .r1 input:not(:placeholder-shown) + label,
+    .r1 input:focus + label {
+        width : 3.5vw;
+    }
+    .r2 input:not(:placeholder-shown) + label,
+    .r2 input:focus + label {
+        width : 14vw;
+    }
+    .r3 input:not(:placeholder-shown) + label,
+    .r3 input:focus + label {
+        width : 3.5vw;
+    }
+    .r4 input:not(:placeholder-shown) + label,
+    .r4 input:focus + label {
+        width : 4vw;
+    }
+}
+button:focus {
+    outline: none;
 }

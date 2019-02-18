@@ -4,13 +4,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/grid.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <title>HADES</title>
     </head>
     <body>
         <div class="row">
-            <div style="float: left; margin-left: 5vw">
-                <i class="arrowbig left"></i>
+            <div style="float: left; margin-left: 5vw" id="back">
             </div>
             <div class="row hd2"><strong>Edit</strong></div>
         </div>
@@ -18,34 +19,44 @@
             <p class="dscev">Form <i class="arrow down"></i></p> 
         </div>
         <div class="row">
-            <form class="tform">
+            <form class="tform" id="update">
                 <div class="formcard">
-                    <div class="ans">
-                        <input type="text" name="name" id="name" required>
+                    <div class="ans" id="aname">
                     </div>
                     <div class="attr">
                         <label for="name">Name</label>
                     </div>
                 </div>
                 <div class="formcard">
-                    <div class="ans">
-                        <input type="text" name="name" id="name" required>
+                    <div class="ans" id="areg">
                     </div>
                     <div class="attr">
-                        <label for="name">Text Field</label>
+                        <label for="name">Reg. No.</label>
                     </div>
                 </div>
                 <div class="formcard">
-                    <div class="ans">
-                        <input type="text" name="name" id="name" required>
+                    <div class="ans" id="aemail">
                     </div>
                     <div class="attr">
-                        <label for="name">Text Field</label>
+                        <label for="name">Email</label>
                     </div>
                 </div>
-                <button class="sub">
-                <input type="submit">
-                <i class="icon ion-ios-checkmark" style="border: none;"></i>
+                <div class="formcard">
+                    <div class="ans" id="aphone">
+                    </div>
+                    <div class="attr">
+                        <label for="name">Phone</label>
+                    </div>
+                </div>
+                <div class="formcard">
+                    <div class="ans" id="agend">
+                    </div>
+                    <div class="attr">
+                        <label for="name">Gender</label>
+                    </div>
+                </div>
+                <button class="sub" type="submit" form="create" id="load">
+                    Submit<i class="icon ion-ios-checkmark" style="border: none;"></i>
                 </button>
                 <button class="sub">
                     Cancel
@@ -53,5 +64,60 @@
                 </button>
             </form>
         </div>
+        <script type="text/javascript">
+            var queryString = decodeURIComponent(window.location.search);
+            queryString = queryString.substring(1);
+            var quer = queryString.split("&");
+            var queries = quer[2].split("=");
+            var event = quer[1].split("=");
+            var club = quer[0].split("=");
+            document.getElementById("back").innerHTML = '<a href="read.html?clubName='+club[1]+'&eventName='+event[1]+'"><i class="arrowbig left"></i></a>'
+            $(document).ready(function (){
+                enter = JSON.stringify({
+                    "query" : {
+                        "key" : "name",
+                        "Value" : queries[1]
+                    }
+                })
+                $.ajax({
+                        type: "POST",
+                        url: "http://68.183.80.71:80/api/v1/participants/read-attendee",
+                        data:enter
+                    }).done(function (data) {
+                    document.getElementById("aname").innerHTML = '<input type="text" id="name" required placeholder="'+data.rs[0].name+'">' 
+                    document.getElementById("areg").innerHTML = '<input type="text" id="regno" required placeholder="'+data.rs[0].registrationNumber+'">'
+                    document.getElementById("aemail").innerHTML = '<input type="text" id="email" required placeholder="'+data.rs[0].email+'">'
+                    document.getElementById("aphone").innerHTML = '<input type="text" id="phone" required placeholder="'+data.rs[0].phoneNumber+'">'
+                    document.getElementById("agend").innerHTML = '<input type="text" id="gender" required placeholder="'+data.rs[0].gender+'">'
+                });
+                $("#load").click(function(e) {
+                    e.preventDefault()
+                   input = JSON.stringify({
+                       "query":{
+                           "key" : $('#name').val(),
+                           "registrationNumber" : $('#regno').val(),
+                           "email" : $('#email').val(),
+                           "phone" : $('#phone').val(),
+                           "gender" : $('#gender').val(),
+                           "eventAttended" : "ALL",
+                           "eventName" : event[1]
+                       }
+                   })
+                    var frm = document.getElementById("update").reset();
+                    console.log(input);
+                    $.ajax({
+                        type: "POST",
+                        url: "http://68.183.80.71:80/api/v1/participants/create-attendee",
+                        data:input
+                    }).done(function (data) {
+                        if(data.rs==="created"){
+//                           alert("Participant Successfully Created!")
+                            swal("Yaay!", "You have created a new participant!", "success");
+                            location.href = "read.html?clubName="+club[1]+"&eventName="+event[1];
+                           }                           
+                    });
+                })
+            })
+        </script>
     </body>
 </html>

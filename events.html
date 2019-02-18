@@ -4,50 +4,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/grid.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <title>HADES</title>
     </head>
     <body>
         <div class="row">
-            <div style="float: left; margin-left: 5vw">
-                <i class="arrowbig left"></i>
+            <div style="float: left; margin-left: 5vw" id="back">
             </div>
-            <div class="row hd2"><strong>Event Name</strong></div>
+            <div class="row hd2"><strong id="eventName">Event Name</strong></div>
         </div>
+<!--
         <div class="row">
             <p class="dscev">Services <i class="arrow down"></i></p> 
         </div>
-        <div class="row">
-            <div class="srcard">
-                <img class="srphoto" src="wide.jpg">
-                <div class="srdet">
-                <strong class="srhd">Participants management</strong><br>
-                </div>
-                <div class="srrtarrow" style="float: right;">
-                    <i class="arrowbig right"></i>
-                </div>
-            </div>
+-->
+        <div id="services">
         </div>
-        <div class="row">
-            <div class="srcard">
-                <img class="srphoto" src="wide.jpg">
-                <div class="srdet">
-                <strong class="srhd">Mailing Services</strong><br>
-                </div>
-                <div class="srrtarrow" style="float: right;">
-                    <i class="arrowbig right"></i>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="srcard">
-                <img class="srphoto" src="wide.jpg">
-                <div class="srdet">
-                <strong class="srhd">Export Details</strong><br>
-                </div>
-                <div class="srrtarrow" style="float: right;">
-                    <i class="arrowbig right"></i>
-                </div>
-            </div>
-        </div>
+        <script type="text/javascript">
+            var queryString = decodeURIComponent(window.location.search);
+            queryString = queryString.substring(1);
+            total = queryString.split("&");
+            club = total[0].split("=");
+            var queries = total[1].split("=");
+            document.getElementById("eventName").innerHTML= queries[1]
+            document.getElementById("back").innerHTML = '<a href="adminhome.html?clubName='+club[1]+'"><i class="arrowbig left"></i></a>'
+            document.getElementById("services").innerHTML='<div class="row"><a href="partman.html?clubName='+club[1]+'&eventName=' + queries[1] + '" style="text-decoration: none;"><div class="srcard"><img class="srphoto" src="wide.jpg"><div class="srdet"><strong class="srhd">Participants management</strong><br></div><div class="srrtarrow" style="float: right;"><i class="arrowbig right"></i></div></div></a></div><div class="row"><a href="events.html?clubName='+club[1]+'&eventName=' + queries[1] + '" style="text-decoration: none;"><div class="srcard"><img class="srphoto" src="wide.jpg"><div class="srdet"><strong class="srhd">Mailing Services</strong><br></div><div class="srrtarrow" style="float: right;"><i class="arrowbig right"></i></div></div></a></div><div class="row"><a href="events.html?clubName='+club[1]+'&eventName=' + queries[1] + '" style="text-decoration: none;"><div class="srcard"><img class="srphoto" src="wide.jpg"><div class="srdet"><strong class="srhd">Export Details</strong><br></div><div class="srrtarrow" style="float: right;"><i class="arrowbig right"></i></div></a></div>'
+        </script>
     </body>
 </html>

@@ -5,47 +5,40 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/grid.css">
 		<link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <title>HADES</title>
     </head>
     <body>
         <div class="row">
-            <div style="float: left; margin-left: 5vw">
-                <i class="arrowbig left"></i>
+            <div style="float: left; margin-left: 5vw" id="back">
             </div>
-            <div class="row hd2"><strong>Create</strong></div>
+            <div class="row hd2"><strong>Create Attendee</strong></div>
         </div>
         <div class="row">
-            <p class="dscev">Form <i class="arrow down"></i></p> 
-        </div>
-        <div class="row">
-            <form class="tform">
-                <div class="formcard">
-                    <div class="ans">
-                        <input type="text" name="name" id="name" required>
-                    </div>
-                    <div class="attr">
-                        <label for="name">Name</label>
-                    </div>
+            <form class="tform" id="create">
+                <div class="field r1">
+                    <input type="text" name="name" id="name" required placeholder="John Doe">
+                    <label for="name">Name</label>
                 </div>
-                <div class="formcard">
-                    <div class="ans">
-                        <input type="text" name="name" id="name" required>
-                    </div>
-                    <div class="attr">
-                        <label for="name">Text Field</label>
-                    </div>
+                <div class="field r2">
+                    <input type="text" id="regno" name="regno" required placeholder="17BCE1234">
+                    <label for="regno">Registration Number</label>
                 </div>
-                <div class="formcard">
-                    <div class="ans">
-                        <input type="text" name="name" id="name" required>
-                    </div>
-                    <div class="attr">
-                        <label for="name">Text Field</label>
-                    </div>
+                <div class="field r3">
+                    <input type="text" id="email" name="email" required placeholder="john.doe@dom.com">
+                    <label for="email">Email</label>
+                </div>     
+                <div class="field r4">
+                    <input type="text" id="phone" name="phone" required placeholder="1800124145">
+                    <label for="phone">Phone</label>
                 </div>
-                <button class="sub">
-                <input type="submit">
-                <i class="icon ion-ios-checkmark" style="border: none;"></i>
+                <div class="field r5">
+                    <input type="text" name="gender" id="gender" required placeholder="M">
+                    <label for="gender">Gender</label>
+                </div>
+                <button class="sub" type="submit" form="create" id="load">
+                    Submit<i class="icon ion-ios-checkmark" style="border: none;"></i>
                 </button>
                 <button class="sub">
                     Cancel
@@ -53,5 +46,78 @@
                 </button>
             </form>
         </div>
+        <script type="text/javascript">
+            var queryString = decodeURIComponent(window.location.search);
+            queryString = queryString.substring(1);
+            total=queryString.split("&");
+            club=total[0].split("=")
+            var queries = total[1].split("=");
+            document.getElementById("back").innerHTML = '<a href="partman.html?clubName='+club[1]+'&eventName='+queries[1]+'"><i class="arrowbig left"></i></a>'
+            $(document).ready(function (){
+                $("#load").click(function(e) {
+                    e.preventDefault();
+                    chkConstraints();
+                })
+                function chkConstraints() {
+                    var constraints = {
+                    "name" : [ /^[A-z ]+$/, "Must be text!" ],
+                    "email" : [ /^[A-z0-9.]+@[A-z0-9.]+.[A-z0-9]+$/ , "Enter Valid Email" ],
+                    "phone" : [ /^[0-9]{10}$/, "Enter 10 digit mobile number" ]
+                    };
+                    var name = document.getElementById("name").value;
+                    var regno = document.getElementById("regno").value;
+                    var email = document.getElementById("email").value;
+                    var phone = document.getElementById("phone").value;
+                    var gender = document.getElementById("gender").value;
+                    var constraint1 = new RegExp(constraints["name"][0],"");
+                    var constraint2 = new RegExp(constraints["email"][0],"");
+                    var constraint3 = new RegExp(constraints["phone"][0],"");
+                    if (!constraint1.test(name)) {
+                        console.log("wrong name");
+                        var element = $("#name")[0];
+                        element.setCustomValidity(constraints["name"][1]);
+                    }
+                    else if (regno === ""){
+                        alert("Enter valid Registration Number");
+                    }
+                    else if (!constraint2.test(email)) {
+                        alert(constraints["email"][1]);
+                    }
+                    else if (!constraint3.test(phone)) {
+                        alert(constraints["phone"][1]);
+                    }
+                    else if (gender !== "M" || gender !=="F"){
+                        alert("Enter Either M or F");
+                    }
+                    else {                    
+                        input = JSON.stringify({
+                            "details":{
+                            "name" : $('#name').val(),
+                            "registrationNumber" : $('#regno').val(),
+                            "email" : $('#email').val(),
+                            "phone" : $('#phone').val(),
+                            "gender" : $('#gender').val(),
+                            "eventAttended" : "ALL",
+                            "eventName" : queries[1]
+                            }
+                        })
+                        var frm = document.getElementById("create").reset();
+                        console.log(input);
+                        $.ajax({
+                            type: "POST",
+                            url: "http://206.189.133.125/api/v1/participants/create-attendee",
+                            data:input
+                        }).done(function (data) {
+                            if(data.rs==="created"){
+    //                           alert("Participant Successfully Created!")
+                                swal("Yaay!", "You have created a new participant!", "success");
+                            }                           
+                        });
+                    }
+                }
+            })
+            
+            
+        </script>
     </body>
 </html>
