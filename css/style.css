@@ -990,47 +990,47 @@ input:not + label {
     }
     .r8 input:not(:placeholder-shown) + label,
     .r8 input:focus + label {
-        width : 14vw;
+        width : 7vw;
     }
     .r9 input:not(:placeholder-shown) + label,
     .r9 input:focus + label {
-        width : 15vw;
+        width : 8vw;
     }
     .r10 input:not(:placeholder-shown) + label,
     .r10 input:focus + label {
-        width : 26vw;
+        width : 13vw;
     }
     .r11 input:not(:placeholder-shown) + label,
     .r11 input:focus + label {
-        width : 28vw;
+        width : 14vw;
     }
     .r12 input:not(:placeholder-shown) + label,
     .r12 input:focus + label {
-        width : 36vw;
+        width : 17.5vw;
     }
     .r13 input:not(:placeholder-shown) + label,
     .r13 input:focus + label {
-        width : 32vw;
+        width : 16vw;
     }
     .r14 input:not(:placeholder-shown) + label,
     .r14 input:focus + label {
-        width : 38vw;
+        width : 18vw;
     }
     .r15 input:not(:placeholder-shown) + label,
     .r15 input:focus + label {
-        width : 38vw;
+        width : 19vw;
     }
     .r16 input:not(:placeholder-shown) + label,
     .r16 input:focus + label {
-        width : 24vw;
+        width : 11.5vw;
     }
     .r17 input:not(:placeholder-shown) + label,
     .r17 input:focus + label {
-        width : 26vw;
+        width : 12.5vw;
     }
     .r18 input:not(:placeholder-shown) + label,
     .r18 input:focus + label {
-        width : 40vw;
+        width : 19.5vw;
     }
 }
 button:focus {
