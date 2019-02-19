@@ -16,20 +16,19 @@ var queryString = decodeURIComponent(window.location.search);
                     var phone = document.getElementById("phone");
                     var gender = document.getElementById("gender");
                     if (!checkName(name)) {
-                        console.log("wrong name");
-                        alert("Enter valid name");
+                        swal("Oops!", "Enter valid name", "error");
                     }
                     else if (regno.value.length == 0){
-                        alert("Enter valid registration number");
+                        swal("Oops!", "Enter valid registration number", "error");
                     }
                     else if (!checkEmail(email)) {
-                        alert("Enter valid Email address");
+                        swal("Oops!", "Enter valid email address", "error");
                     }
                     else if (!checkPhone(phone)) {
-                        alert("Enter valid phone number");
+                        swal("Oops!", "Enter valid phone number", "error");
                     }
                     else if (!checkGender(gender)){
-                        alert("Enter either M or F");
+                        swal("Oops!", "Enter M/F for gender", "error");
                     }
                     else {                    
                         input = JSON.stringify({
@@ -50,7 +49,7 @@ var queryString = decodeURIComponent(window.location.search);
                             data:input
                         }).done(function (data) {
                             if(data.rs==="created"){
-                                swal("Yaay!", "You have created a new participant!", "success");
+                                swal("Success!", "You have created a new participant!", "success");
                             }                           
                         });
                     }

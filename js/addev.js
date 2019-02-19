@@ -178,7 +178,7 @@ var queryString = decodeURIComponent(window.location.search);
                             data:input
                         }).done(function (data) {
                             if(data.rs==="created"){
-                                swal("Yaay!", "You have created a new event!", "success");
+                                swal("Success!", "You have created a new event!", "success");
                             }                           
                         });
                     }
