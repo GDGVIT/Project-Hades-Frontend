@@ -22,13 +22,10 @@
             <p class="dscev">Functions <i class="arrow down"></i></p> 
         </div>
         <div class="row">
-            <div class="evcard">
+            <div class="evcard" onclick="expallc()">
                 <img class="evphoto" src="color2c7cff.jpg">
                 <div class="evdet">
-                <strong class="evhd">Type of export</strong><br>Extension of the file.
-                </div>
-                <div class="rtarrow" style="float: right;">
-                    <i class="arrowbig right"></i>
+                <strong class="evhd">Export as CSV</strong><br>Export All
                 </div>
             </div>
         </div>
@@ -39,6 +36,21 @@
             club = total[0].split("=");
             var queries = total[1].split("=");
             document.getElementById("back").innerHTML = '<a href="events.html?clubName='+club[1]+'&eventName='+queries[1]+'"><i class="arrowbig left"></i></a>'
+            function expallc() {
+                $.ajax({
+                    type: "POST",
+                    url: "http://206.189.133.125/api/v1/exporter/excel",
+                    data: JSON.stringify({
+                        "event": queries[1],
+                        "query": {
+                            "specific": "project-all"
+                        }
+                    })
+                    
+                })
+            }
+        </script>
+        <script type="text/javascript">
         </script>
     </body>
 </html>
