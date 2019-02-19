@@ -672,6 +672,58 @@ input:focus + label {
 .r5 input:focus + label {
     width : 15vw;
 }
+.r6 input:not(:placeholder-shown) + label,
+.r6 input:focus + label {
+    width : 28vw;
+}
+.r7 input:not(:placeholder-shown) + label,
+.r7 input:focus + label {
+    width : 18vw;
+}
+.r8 input:not(:placeholder-shown) + label,
+.r8 input:focus + label {
+    width : 21vw;
+}
+.r9 input:not(:placeholder-shown) + label,
+.r9 input:focus + label {
+    width : 24vw;
+}
+.r10 input:not(:placeholder-shown) + label,
+.r10 input:focus + label {
+    width : 40vw;
+}
+.r11 input:not(:placeholder-shown) + label,
+.r11 input:focus + label {
+    width : 43vw;
+}
+.r12 input:not(:placeholder-shown) + label,
+.r12 input:focus + label {
+    width : 54vw;
+}
+.r13 input:not(:placeholder-shown) + label,
+.r13 input:focus + label {
+    width : 48vw;
+}
+.r14 input:not(:placeholder-shown) + label,
+.r14 input:focus + label {
+    width : 56vw;
+}
+.r15 input:not(:placeholder-shown) + label,
+.r15 input:focus + label {
+    width : 58vw;
+}
+.r16 input:not(:placeholder-shown) + label,
+.r16 input:focus + label {
+    width : 36vw;
+}
+.r17 input:not(:placeholder-shown) + label,
+.r17 input:focus + label {
+    width : 38vw;
+}
+.r18 input:not(:placeholder-shown) + label,
+.r18 input:focus + label {
+    width : 60vw;
+}
 
 input:focus  {
     border: solid 0.5vw #2c7cff;
@@ -728,6 +780,58 @@ input:not + label {
     .r5 input:focus + label {
         width : 10vw;
     }
+    .r6 input:not(:placeholder-shown) + label,
+    .r6 input:focus + label {
+        width : 18.5vw;
+    }
+    .r7 input:not(:placeholder-shown) + label,
+    .r7 input:focus + label {
+        width : 12vw;
+    }
+    .r8 input:not(:placeholder-shown) + label,
+    .r8 input:focus + label {
+        width : 14vw;
+    }
+    .r9 input:not(:placeholder-shown) + label,
+    .r9 input:focus + label {
+        width : 15vw;
+    }
+    .r10 input:not(:placeholder-shown) + label,
+    .r10 input:focus + label {
+        width : 26vw;
+    }
+    .r11 input:not(:placeholder-shown) + label,
+    .r11 input:focus + label {
+        width : 28vw;
+    }
+    .r12 input:not(:placeholder-shown) + label,
+    .r12 input:focus + label {
+        width : 36vw;
+    }
+    .r13 input:not(:placeholder-shown) + label,
+    .r13 input:focus + label {
+        width : 32vw;
+    }
+    .r14 input:not(:placeholder-shown) + label,
+    .r14 input:focus + label {
+        width : 38vw;
+    }
+    .r15 input:not(:placeholder-shown) + label,
+    .r15 input:focus + label {
+        width : 38vw;
+    }
+    .r16 input:not(:placeholder-shown) + label,
+    .r16 input:focus + label {
+        width : 24vw;
+    }
+    .r17 input:not(:placeholder-shown) + label,
+    .r17 input:focus + label {
+        width : 26vw;
+    }
+    .r18 input:not(:placeholder-shown) + label,
+    .r18 input:focus + label {
+        width : 40vw;
+    }
 }
 @media only screen and (min-width:800px) and (max-width:1250px){
     input {
@@ -776,6 +880,58 @@ input:not + label {
     .r5 input:focus + label {
         width : 6vw;
     }
+    .r6 input:not(:placeholder-shown) + label,
+    .r6 input:focus + label {
+        width : 12vw;
+    }
+    .r7 input:not(:placeholder-shown) + label,
+    .r7 input:focus + label {
+        width : 8vw;
+    }
+    .r8 input:not(:placeholder-shown) + label,
+    .r8 input:focus + label {
+        width : 9vw;
+    }
+    .r9 input:not(:placeholder-shown) + label,
+    .r9 input:focus + label {
+        width : 10vw;
+    }
+    .r10 input:not(:placeholder-shown) + label,
+    .r10 input:focus + label {
+        width : 16vw;
+    }
+    .r11 input:not(:placeholder-shown) + label,
+    .r11 input:focus + label {
+        width : 18vw;
+    }
+    .r12 input:not(:placeholder-shown) + label,
+    .r12 input:focus + label {
+        width : 22vw;
+    }
+    .r13 input:not(:placeholder-shown) + label,
+    .r13 input:focus + label {
+        width : 20vw;
+    }
+    .r14 input:not(:placeholder-shown) + label,
+    .r14 input:focus + label {
+        width : 22vw;
+    }
+    .r15 input:not(:placeholder-shown) + label,
+    .r15 input:focus + label {
+        width : 23vw;
+    }
+    .r16 input:not(:placeholder-shown) + label,
+    .r16 input:focus + label {
+        width : 14vw;
+    }
+    .r17 input:not(:placeholder-shown) + label,
+    .r17 input:focus + label {
+        width : 16vw;
+    }
+    .r18 input:not(:placeholder-shown) + label,
+    .r18 input:focus + label {
+        width : 24vw;
+    }
 }
 @media only screen and (min-width:1250px){
     input {
@@ -823,6 +979,58 @@ input:not + label {
     .r5 input:not(:placeholder-shown) + label,
     .r5 input:focus + label {
         width : 5vw;
+    }
+    .r6 input:not(:placeholder-shown) + label,
+    .r6 input:focus + label {
+        width : 9vw;
+    }
+    .r7 input:not(:placeholder-shown) + label,
+    .r7 input:focus + label {
+        width : 6vw;
+    }
+    .r8 input:not(:placeholder-shown) + label,
+    .r8 input:focus + label {
+        width : 14vw;
+    }
+    .r9 input:not(:placeholder-shown) + label,
+    .r9 input:focus + label {
+        width : 15vw;
+    }
+    .r10 input:not(:placeholder-shown) + label,
+    .r10 input:focus + label {
+        width : 26vw;
+    }
+    .r11 input:not(:placeholder-shown) + label,
+    .r11 input:focus + label {
+        width : 28vw;
+    }
+    .r12 input:not(:placeholder-shown) + label,
+    .r12 input:focus + label {
+        width : 36vw;
+    }
+    .r13 input:not(:placeholder-shown) + label,
+    .r13 input:focus + label {
+        width : 32vw;
+    }
+    .r14 input:not(:placeholder-shown) + label,
+    .r14 input:focus + label {
+        width : 38vw;
+    }
+    .r15 input:not(:placeholder-shown) + label,
+    .r15 input:focus + label {
+        width : 38vw;
+    }
+    .r16 input:not(:placeholder-shown) + label,
+    .r16 input:focus + label {
+        width : 24vw;
+    }
+    .r17 input:not(:placeholder-shown) + label,
+    .r17 input:focus + label {
+        width : 26vw;
+    }
+    .r18 input:not(:placeholder-shown) + label,
+    .r18 input:focus + label {
+        width : 40vw;
     }
 }
 button:focus {
