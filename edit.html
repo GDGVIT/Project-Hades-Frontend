@@ -13,7 +13,7 @@
         <div class="row">
             <div style="float: left; margin-left: 5vw" id="back">
             </div>
-            <div class="row hd2"><strong>Edit</strong></div>
+            <div class="row hd2"><strong>Read</strong></div>
         </div>
         <div class="row">
             <p class="dscev">Form <i class="arrow down"></i></p> 
@@ -111,7 +111,6 @@
                         data:input
                     }).done(function (data) {
                         if(data.rs==="created"){
-//                           alert("Participant Successfully Created!")
                             swal("Yaay!", "You have created a new participant!", "success");
                             location.href = "read.html?clubName="+club[1]+"&eventName="+event[1];
                            }                           
