@@ -20,13 +20,13 @@ var queryString = decodeURIComponent(window.location.search);
                         alert("Enter valid name");
                     }
                     else if (regno.value.length == 0){
-                        alert("Enter valid registration number");;
+                        alert("Enter valid registration number");
                     }
                     else if (!checkEmail(email)) {
-                        alert("Enter valid Email address");;
+                        alert("Enter valid Email address");
                     }
                     else if (!checkPhone(phone)) {
-                        alert("Enter valid phone number");;
+                        alert("Enter valid phone number");
                     }
                     else if (!checkGender(gender)){
                         alert("Enter either M or F");

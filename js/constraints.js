@@ -34,3 +34,12 @@ function checkGender(inputText){
         return false;
     }
 }
+function checkBudget(inputText){
+    var exp = /^[0-9]+$/
+    if(inputText.value.match(exp)){
+        return true;
+    }
+    else{
+        return false;
+    }
+}

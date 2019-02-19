@@ -16,7 +16,7 @@
             <div class="row hd2"><strong>Create Event</strong></div>
         </div>
         <div class="row">
-            <form class="tform" id="create">
+            <form class="tform" id="createev">
                 <div class="field r6">
                     <input type="text" name="ename" id="ename" required placeholder="Devfest">
                     <label for="ename">Name of Event</label>
@@ -161,137 +161,16 @@
                     <input type="text" name="msl" id="msl" required placeholder="ITC Fortune Park">
                     <label for="msl">Main Sponsor: location of stay</label>
                 </div>   
-                <button class="sub" type="submit" form="create" id="load">
+                <button class="sub" type="submit" form="createev" id="load">
                     Submit<i class="icon ion-ios-checkmark" style="border: none;"></i>
                 </button>
-                <button class="sub">
+                <button class="sub" type="reset" form="createev">
                     Cancel
                     <i class="icon ion-ios-close" style="border: none;"></i>
                 </button>
             </form>
         </div>
-<!--
-{"event":{
- "clubName":"GDG",
- "name":"DEVRELCONF",
- "toDate":"10TH OCTOBER",
- "fromDate":"8TH OCTOBER",
- "toTime":"10 PM",
- "fromTime":"11 AM",
- "budget":"200000",
- "description":"TECHNICAL EVENT AT GDG VIT. ITS GONNA BE AMAZING",
- "category":"TECHNICAL",
- "venue":"ANNA AUDI",
- "attendance":"4000",
- "expectedParticipants":"4000",
- "facultyCoordinator":{
-    "name":"NOORU MAA",
-    "registrationNumber":"17BBE1010",
-    "email":"SDADAS@A.COM",
-    "phoneNumber":"919191991911",
-    "gender":"M",
-    "eventsAttended":"ALL"
- },
- "studentCoordinator":{
-    "name":"NOOR",
-    "registrationNumber":"17BBE1010",
-    "email":"SDADAS@A.COM",
-    "phoneNumber":"919191991911",
-    "gender":"M",
-    "eventsAttended":"ALL"
- },
- "guest":{
-    "name":"DAAS",
-    "email":"ASDSAD#ASD.COM",
-    "phoneNumber":"11111111111",
-    "gender":"F",
-    "stake":"SOME MONAYYYY",
-    "locationOfStay":"GHAR"
- },
- "PROrequest":"SAJDOOSIJANDFSAKFDSAFD",
- "campusEngineerRequest":"SDFHBSADUB, ASNFD , AS KDFSAM FDSA, AS, SD",
- "duration":"16 hours",
- "mainSponsor":{
-    "name":"DAASA",
-    "email":"ASDSAD#ASD.COM",
-    "phoneNumber":"11111111111",
-    "gender":"F",
-    "stake":"SOME MONAYYYY",
-    "locationOfStay":"GHAR2"
- }
-}
--->
-        <script type="text/javascript">
-            var queryString = decodeURIComponent(window.location.search);
-            queryString = queryString.substring(1);
-            total=queryString.split("&");
-            club=total[0].split("=")
-            var queries = total[1].split("=");
-            document.getElementById("back").innerHTML = '<a href="partman.html?clubName='+club[1]+'&eventName='+queries[1]+'"><i class="arrowbig left"></i></a>'
-            $(document).ready(function (){
-                $("#load").click(function(e) {
-                    e.preventDefault();
-                    chkConstraints();
-                })
-                function chkConstraints() {
-                    var constraints = {
-                    "name" : [ /^[A-z ]+$/, "Must be text!" ],
-                    "email" : [ /^[A-z0-9.]+@[A-z0-9.]+.[A-z0-9]+$/ , "Enter Valid Email" ],
-                    "phone" : [ /^[0-9]{10}$/, "Enter 10 digit mobile number" ]
-                    };
-                    var name = document.getElementById("name").value;
-                    var regno = document.getElementById("regno").value;
-                    var email = document.getElementById("email").value;
-                    var phone = document.getElementById("phone").value;
-                    var gender = document.getElementById("gender").value;
-                    var constraint1 = new RegExp(constraints["name"][0],"");
-                    var constraint2 = new RegExp(constraints["email"][0],"");
-                    var constraint3 = new RegExp(constraints["phone"][0],"");
-                    if (!constraint1.test(name)) {
-                        console.log("wrong name");
-                        var element = $("#name")[0];
-                        element.setCustomValidity(constraints["name"][1]);
-                    }
-                    else if (regno === ""){
-                        alert("Enter valid Registration Number");
-                    }
-                    else if (!constraint2.test(email)) {
-                        alert(constraints["email"][1]);
-                    }
-                    else if (!constraint3.test(phone)) {
-                        alert(constraints["phone"][1]);
-                    }
-                    else if (gender !== "M" || gender !=="F"){
-                        alert("Enter Either M or F");
-                    }
-                    else {                    
-                        input = JSON.stringify({
-                            "details":{
-                            "name" : $('#name').val(),
-                            "registrationNumber" : $('#regno').val(),
-                            "email" : $('#email').val(),
-                            "phone" : $('#phone').val(),
-                            "gender" : $('#gender').val(),
-                            "eventAttended" : "ALL",
-                            "eventName" : queries[1]
-                            }
-                        })
-                        var frm = document.getElementById("create").reset();
-                        console.log(input);
-                        $.ajax({
-                            type: "POST",
-                            url: "http://206.189.133.125/api/v1/participants/create-attendee",
-                            data:input
-                        }).done(function (data) {
-                            if(data.rs==="created"){
-                                swal("Yaay!", "You have created a new participant!", "success");
-                            }                           
-                        });
-                    }
-                }
-            })
-            
-            
-        </script>
+        <script type="text/javascript" src="js/constraints.js"></script>
+        <script type="text/javascript" src="js/addev.js"></script>
     </body>
 </html>
