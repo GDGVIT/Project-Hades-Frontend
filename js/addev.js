@@ -64,7 +64,7 @@ var queryString = decodeURIComponent(window.location.search);
                     else if (!checkName(document.getElementById("stun"))){
                         swal("Oops!", "Enter valid Student Coordinator Name", "error");
                     }
-                    else if (!checkBudget(document.getElementById("stur"))){
+                    else if (document.getElementById("stur").value.length == 0){
                         swal("Oops!", "Enter valid Student Coordinator Registration Number", "error");
                     }
                     else if (!checkEmail(document.getElementById("stuem"))){
@@ -171,7 +171,7 @@ var queryString = decodeURIComponent(window.location.search);
                             "locationOfStay":$('#msl').val()
                          }
                         }})
-                        var frm = document.getElementById("create").reset();
+                        var frm = document.getElementById("createev").reset();
                         $.ajax({
                             type: "POST",
                             url: "http://206.189.133.125/api/v1/event/create-event",
