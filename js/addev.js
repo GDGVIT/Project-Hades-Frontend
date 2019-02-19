@@ -14,112 +14,112 @@ var queryString = decodeURIComponent(window.location.search);
                     var phone = document.getElementById("phone");
                     var gender = document.getElementById("gender");
                     if (!checkName(document.getElementById("ename"))) {
-                        alert("Enter valid event name");
+                        swal("Oops!", "Enter valid Event Name", "error");
                     }
                     else if (document.getElementById("todate").value.length == 0){
-                        alert("Enter valid date");
+                        swal("Oops!", "Enter valid End Date", "error");
                     }
                     else if (document.getElementById("fdate").value.length == 0){
-                        alert("Enter valid date");
+                        swal("Oops!", "Enter valid Start Date", "error");
                     }
                     else if (document.getElementById("totime").value.length == 0){
-                        alert("Enter valid time");
+                        swal("Oops!", "Enter valid End Time", "error");
                     }
                     else if (document.getElementById("ftime").value.length == 0){
-                        alert("Enter valid time");
+                        swal("Oops!", "Enter valid Start Time", "error");
                     }
                     else if (!checkBudget(document.getElementById("budget"))){
-                        alert("Enter valid budget");
+                        swal("Oops!", "Enter valid Budget", "error");
                     }
                     else if (document.getElementById("desc").value.length == 0){
-                        alert("Enter valid description");
+                        swal("Oops!", "Enter valid Description", "error");
                     }
                     else if (document.getElementById("cat").value.length == 0){
-                        alert("Enter valid category");
+                        swal("Oops!", "Enter valid Category", "error");
                     }
                     else if (document.getElementById("ven").value.length == 0){
-                        alert("Enter valid venue");
+                        swal("Oops!", "Enter valid Venue", "error");
                     }
                     else if (!checkBudget(document.getElementById("att"))){
-                        alert("Enter valid number of attendees");
+                        swal("Oops!", "Enter valid Number of Attendees", "error");
                     }
                     else if (!checkBudget(document.getElementById("exp"))){
-                        alert("Enter valid number of expected participants");
+                        swal("Oops!", "Enter valid Number of Expected Participants", "error");
                     }
                     else if (!checkName(document.getElementById("facn"))){
-                        alert("Enter valid name of Faculty");
+                        swal("Oops!", "Enter valid Faculty Name", "error");
                     }
                     else if (!checkBudget(document.getElementById("facr"))){
-                        alert("Enter valid Faculty number");
+                        swal("Oops!", "Enter valid Faculty Number", "error");
                     }
                     else if (!checkEmail(document.getElementById("facem"))){
-                        alert("Enter valid Faculty email address");
+                        swal("Oops!", "Enter valid Faculty Email Address", "error");
                     }
                     else if (!checkPhone(document.getElementById("facp"))){
-                        alert("Enter valid Faculty phone number");
+                        swal("Oops!", "Enter valid Faculty Phone Number", "error");
                     }
                     else if (!checkGender(document.getElementById("facg"))){
-                        alert("Enter M/F for Faculty gender");
+                        swal("Oops!", "Enter M/F for Faculty Gender", "error");
                     }
                     else if (!checkName(document.getElementById("stun"))){
-                        alert("Enter valid name of Student Coordinator");
+                        swal("Oops!", "Enter valid Student Coordinator Name", "error");
                     }
                     else if (!checkBudget(document.getElementById("stur"))){
-                        alert("Enter valid Student Coordinator number");
+                        swal("Oops!", "Enter valid Student Coordinator Registration Number", "error");
                     }
                     else if (!checkEmail(document.getElementById("stuem"))){
-                        alert("Enter valid Student Coordinator email address");
+                        swal("Oops!", "Enter valid Student Coordinator Email Address", "error");
                     }
                     else if (!checkPhone(document.getElementById("stup"))){
-                        alert("Enter valid Student Coordinator phone number");
+                        swal("Oops!", "Enter valid Student Coordinator Phone Number", "error");
                     }
                     else if (!checkGender(document.getElementById("stug"))){
-                        alert("Enter M/F for Student Coordinator gender");
+                        swal("Oops!", "Enter M/F for Student Coordinator Gender", "error");
                     }
                     else if (!checkName(document.getElementById("cgn"))){
-                        alert("Enter valid name of Chief Guest");
+                        swal("Oops!", "Enter valid Chief Guest Name", "error");
                     }
                     else if (!checkEmail(document.getElementById("cgem"))){
-                        alert("Enter valid Chief Guest email address");
+                        swal("Oops!", "Enter valid Chief Guest Email Address", "error");
                     }
                     else if (!checkPhone(document.getElementById("cgp"))){
-                        alert("Enter valid Chief Guest phone number");
+                        swal("Oops!", "Enter valid Chief Guest Phone Number", "error");
                     }
                     else if (!checkGender(document.getElementById("cgg"))){
-                        alert("Enter M/F for Chief Guest gender");
+                        swal("Oops!", "Enter M/F for Chief Guest Gender", "error");
                     }
                     else if (document.getElementById("cgs").value.length == 0){
-                        alert("Enter valid stake of Chief Guest");
+                        swal("Oops!", "Enter valid Stake of Chief Guest", "error");
                     }
                     else if (document.getElementById("cgl").value.length == 0){
-                        alert("Enter valid location of stay for Chief Guest");
+                        swal("Oops!", "Enter valid Location of Stay for Chief Guest", "error");
                     }
                     else if (document.getElementById("pro").value.length == 0){
-                        alert("Enter valid PRO Request");
+                        swal("Oops!", "Enter valid PRO Request", "error");
                     }
                     else if (document.getElementById("cer").value.length == 0){
-                        alert("Enter valid Campus Engineer Request");
+                        swal("Oops!", "Enter valid Campus Engineer Request", "error");
                     }
                     else if (document.getElementById("dur").value.length == 0){
-                        alert("Enter valid duration");
+                        swal("Oops!", "Enter valid Event Duration", "error");
                     }
                     else if (!checkName(document.getElementById("msn"))){
-                        alert("Enter valid name of Main Sponsor");
+                        swal("Oops!", "Enter valid Main Sponsor Name", "error");
                     }
                     else if (!checkEmail(document.getElementById("msem"))){
-                        alert("Enter valid Main Sponsor email address");
+                        swal("Oops!", "Enter valid Main Sponsor Email Address", "error");
                     }
                     else if (!checkPhone(document.getElementById("msp"))){
-                        alert("Enter valid Main Sponsor phone number");
+                        swal("Oops!", "Enter valid Main Sponsor Phone Number", "error");
                     }
                     else if (!checkGender(document.getElementById("msg"))){
-                        alert("Enter M/F for Main Sponsor gender");
+                        swal("Oops!", "Enter M/F for Main Sponsor Gender", "error");
                     }
                     else if (document.getElementById("mss").value.length == 0){
-                        alert("Enter valid stake of Main Sponsor");
+                        swal("Oops!", "Enter valid Stake of Main Sponsor", "error");
                     }
                     else if (document.getElementById("msl").value.length == 0){
-                        alert("Enter valid location of stay for Main Sponsor");
+                        swal("Oops!", "Enter valid Location of Stay for Main Sponsor", "error");
                     }
                     else {     
                         input = JSON.stringify({"event":{
