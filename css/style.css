@@ -569,6 +569,7 @@ html, body {
         font-size: 1.5vw;
     }
 }
+
 #load {
     border: none;
     background-color: white;
@@ -667,6 +668,10 @@ input:focus + label {
 .r4 input:focus + label {
     width : 13vw;
 }
+.r5 input:not(:placeholder-shown) + label,
+.r5 input:focus + label {
+    width : 15vw;
+}
 
 input:focus  {
     border: solid 0.5vw #2c7cff;
@@ -719,6 +724,10 @@ input:not + label {
     .r4 input:focus + label {
         width : 8.5vw;
     }
+    .r5 input:not(:placeholder-shown) + label,
+    .r5 input:focus + label {
+        width : 10vw;
+    }
 }
 @media only screen and (min-width:800px) and (max-width:1250px){
     input {
@@ -763,6 +772,10 @@ input:not + label {
     .r4 input:focus + label {
         width : 5.5vw;
     }
+    .r5 input:not(:placeholder-shown) + label,
+    .r5 input:focus + label {
+        width : 6vw;
+    }
 }
 @media only screen and (min-width:1250px){
     input {
@@ -806,6 +819,10 @@ input:not + label {
     .r4 input:not(:placeholder-shown) + label,
     .r4 input:focus + label {
         width : 4vw;
+    }
+    .r5 input:not(:placeholder-shown) + label,
+    .r5 input:focus + label {
+        width : 5vw;
     }
 }
 button:focus {
