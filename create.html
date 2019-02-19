@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/grid.css">
 		<link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
@@ -46,6 +47,7 @@
                 </button>
             </form>
         </div>
+        <script type="text/javascript" src="js/constraints.js"></script>
         <script type="text/javascript">
             var queryString = decodeURIComponent(window.location.search);
             queryString = queryString.substring(1);
@@ -59,35 +61,26 @@
                     chkConstraints();
                 })
                 function chkConstraints() {
-                    var constraints = {
-                    "name" : [ /^[A-z ]+$/, "Must be text!" ],
-                    "email" : [ /^[A-z0-9.]+@[A-z0-9.]+.[A-z0-9]+$/ , "Enter Valid Email" ],
-                    "phone" : [ /^[0-9]{10}$/, "Enter 10 digit mobile number" ]
-                    };
-                    var name = document.getElementById("name").value;
-                    var regno = document.getElementById("regno").value;
-                    var email = document.getElementById("email").value;
-                    var phone = document.getElementById("phone").value;
-                    var gender = document.getElementById("gender").value;
-                    var constraint1 = new RegExp(constraints["name"][0],"");
-                    var constraint2 = new RegExp(constraints["email"][0],"");
-                    var constraint3 = new RegExp(constraints["phone"][0],"");
-                    if (!constraint1.test(name)) {
+                    var name = document.getElementById("name");
+                    var regno = document.getElementById("regno");
+                    var email = document.getElementById("email");
+                    var phone = document.getElementById("phone");
+                    var gender = document.getElementById("gender");
+                    if (!checkName(name)) {
                         console.log("wrong name");
-                        var element = $("#name")[0];
-                        element.setCustomValidity(constraints["name"][1]);
+                        alert("Enter valid name");
                     }
-                    else if (regno === ""){
-                        alert("Enter valid Registration Number");
+                    else if (regno.value.length == 0){
+                        alert("Enter valid registration number");;
                     }
-                    else if (!constraint2.test(email)) {
-                        alert(constraints["email"][1]);
+                    else if (!checkEmail(email)) {
+                        alert("Enter valid Email address");;
                     }
-                    else if (!constraint3.test(phone)) {
-                        alert(constraints["phone"][1]);
+                    else if (!checkPhone(phone)) {
+                        alert("Enter valid phone number");;
                     }
-                    else if (gender !== "M" || gender !=="F"){
-                        alert("Enter Either M or F");
+                    else if (!checkGender(gender)){
+                        alert("Enter either M or F");
                     }
                     else {                    
                         input = JSON.stringify({
@@ -102,14 +95,12 @@
                             }
                         })
                         var frm = document.getElementById("create").reset();
-                        console.log(input);
                         $.ajax({
                             type: "POST",
                             url: "http://206.189.133.125/api/v1/participants/create-attendee",
                             data:input
                         }).done(function (data) {
                             if(data.rs==="created"){
-    //                           alert("Participant Successfully Created!")
                                 swal("Yaay!", "You have created a new participant!", "success");
                             }                           
                         });
