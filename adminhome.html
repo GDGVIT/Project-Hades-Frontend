@@ -29,8 +29,8 @@
             var input = JSON.stringify({
                 "query": {
                     "key": "clubName",
-                    "value": queries[1],
-                    "specific": ""
+                    "value": queries[1]
+//                    "specific": ""
                 }
             })
             count = 0
@@ -44,9 +44,10 @@
                     $.ajax({
                         type: "POST",
                         url: "http://206.189.133.125/api/v1/event/read-event",
-                        data:input
+                        data:input//,
+                        //headers:{"Content-Type": "application/json"}
                     }).done(function (data) {
-                        if (true) {
+                        if (data.rs) {
                             var txt="";
                             for (var i=0;i<data.rs.length; i++){
                                 var obj = data.rs[i];
