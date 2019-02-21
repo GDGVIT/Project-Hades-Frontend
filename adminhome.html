@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="row">
-            <button id="evload"><p class="dscev">Events <i class="arrow down"></i></p></button> 
+            <button id="evload"><p class="dscev">Events <i class="arrow down" id="showd"></i></p></button> 
         </div>
         <div id="hola"></div>
         <div class="row" id="addev"></div>
@@ -37,15 +37,11 @@
             document.getElementById( "addev" ).innerHTML = '<a href="addev.html?clubName='+queries[1]+'"><button class="sub">Add Event</button></a>'
             $(document).ready(function (){
                 $("#evload").click(function() {
-                    count+=1;
-                    if(count%2===1)
-                        {
-                            document.getElementById("hola").style.visibility = "visible";
+                    document.getElementById("hola").style.visibility = "visible";
                     $.ajax({
                         type: "POST",
                         url: "http://206.189.133.125/api/v1/event/read-event",
-                        data:input//,
-                        //headers:{"Content-Type": "application/json"}
+                        data:input
                     }).done(function (data) {
                         if (data.rs) {
                             var txt="";
@@ -54,11 +50,9 @@
                                 txt = txt + '<a href="events.html?clubName='+queries[1]+'&eventName=' + obj.name + '" style="text-decoration: none;"><div class="row"><div class="evcard"><img class="evphoto" src="lm5.jpg"><div class="evdet"><strong class="evhd">' + obj.name + '</strong><br>'+obj.fromDate+'</div><div class="rtarrow" style="float: right;"><i class="arrowbig right"></i></div></div></div></a>';
                             }
                             document.getElementById("hola").innerHTML= txt;
+                             document.getElementById("showd").style.visibility="hidden";
                         }
                     });
-                }
-                    else
-                        document.getElementById("hola").style.visibility="hidden";
                 })
             }) 
         </script>
