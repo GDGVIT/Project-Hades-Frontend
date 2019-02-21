@@ -158,6 +158,7 @@ html, body {
         background-color: #ffffff;
         margin-left: 15vw;
         font-size: 4vw;
+        margin-bottom: 2vw;
     }
     
     .sub input {
@@ -1087,7 +1088,7 @@ button:focus {
 @media only screen and (min-width:1000px) {
     .confirm {
         border: 1px solid #2c7cff;
-        margin-top: 10vw;
+        margin-top: 8vw;
         position: fixed;
         border-radius: 10px;
         font-family: sans-serif;
