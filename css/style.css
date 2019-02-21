@@ -29,7 +29,7 @@ html, body {
     }
 
     html{
-        background-color: #ffffff;
+        background-color: #f7f7f7;
     }
 
     body {
@@ -209,7 +209,7 @@ html, body {
     }
 
     html{
-        background-color: #ffffff;
+        background-color: #f7f7f7;
     }
 
     body {
@@ -391,7 +391,7 @@ html, body {
     }
 
     html{
-        background-color: #ffffff;
+        background-color: #f7f7f7;
     }
 
     body {
@@ -938,19 +938,19 @@ input:not + label {
         font-size: 1.2vw;
         padding-top: 1.2vw;
         padding-bottom: 1.2vw;
-        margin-left: 23vw;
-        margin-right: 23vw;
+        margin-left: 18vw;
+        margin-right: 18vw;
         height: 4.2vw;
         border: solid 0.1vw #8e8e8e;
     }
     input:placeholder-shown + label {
         font-size: 0.8vw;
-        margin-left: 24vw;
+        margin-left: 20vw;
         transform: translate(0, 3.1vw) scale(1.5);
     }
     input:not(:placeholder-shown) + label,
     input:focus + label {
-        transform: translate(7.2vw, 0.7vw) scale(1);
+        transform: translate(1.8vw, 0.7vw) scale(1);
         cursor: pointer;
         font-size: 1vw;
         padding:0.5px;
@@ -1035,4 +1035,52 @@ input:not + label {
 }
 button:focus {
     outline: none;
+}
+.confirm {
+    display: none;
+    background-color: rgb(44, 124, 255);
+    color: white;
+    font-size:2vw;
+    border: 1px solid #2c7cff;
+    margin-top: 20vw;
+    position: fixed;
+    border-radius: 10px;
+    font-family: sans-serif;
+    width: 35vw;
+    left: 50%;
+    margin-left: -18vw;
+    padding:5vw 12px;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 1;
+}
+.confirm button {
+    background-color: white;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid #2c7cff;
+    padding: 1vw;
+    margin-top:2vw;
+    text-align: center;
+    width: 5vw;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+.confirm .message {
+    text-align: center;
+}
+@media only screen and (max-width:500px) {
+    .confirm {
+        font-size:3vw;
+        margin-top: 25vw;
+        width: 50vw;
+        margin-left: -25vw;
+        padding:4vw 4vw;
+    }
+    .confirm button {
+        padding: 1.5vw;
+        margin-top:2vw;
+        width: 10vw;
+        font-size: 2vw;
+    }
 }

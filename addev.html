@@ -20,22 +20,26 @@
                 <div class="field r6">
                     <input type="text" name="ename" id="ename" required placeholder="Devfest">
                     <label for="ename">Name of Event</label>
-                </div>          
-                <div class="field r7">
-                    <input type="text" id="todate" name="todate" required placeholder="26th June">
-                    <label for="todate">End Date</label>
-                </div>
+                </div>         
                 <div class="field r8">
                     <input type="text" id="fdate" name="fdate" required placeholder="31st March">
                     <label for="fdate">Start Date</label>
-                </div>
+                </div> 
                 <div class="field r7">
-                    <input type="text" id="totime" name="totime" required placeholder="12 PM">
-                    <label for="totime">End Time</label>
+                    <input type="text" id="todate" name="todate" required placeholder="26th June">
+                    <label for="todate">End Date</label>
+                    <div class="confirm" id="confirm-f1">
+                             <div class="message" id="message-f1">Enter valid name.</div>
+                             <button class="yes" id="yes-f1">OK</button>
+                    </div>
                 </div>
                 <div class="field r8">
                     <input type="text" id="ftime" name="ftime" required placeholder="12 PM">
                     <label for="ftime">Start Time</label>
+                </div>
+                <div class="field r7">
+                    <input type="text" id="totime" name="totime" required placeholder="12 PM">
+                    <label for="totime">End Time</label>
                 </div>
                 <div class="field r5">
                     <input type="text" id="budget" name="budget" required placeholder="198900">
@@ -171,6 +175,7 @@
             </form>
         </div>
         <script type="text/javascript" src="js/constraints.js"></script>
+        <script type="text/javascript" src="js/alerts.js"></script>
         <script type="text/javascript" src="js/addev.js"></script>
     </body>
 </html>

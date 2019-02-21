@@ -16,19 +16,24 @@ var queryString = decodeURIComponent(window.location.search);
                     var phone = document.getElementById("phone");
                     var gender = document.getElementById("gender");
                     if (!checkName(name)) {
-                        swal("Oops!", "Enter valid name", "error");
+                        document.getElementById('message-f1').innerHTML = 'Enter valid name.'
+                        functionAlert();
                     }
                     else if (regno.value.length == 0){
-                        swal("Oops!", "Enter valid registration number", "error");
+                        document.getElementById('message-f1').innerHTML = 'Enter valid registration number.'
+                        functionAlert();
                     }
                     else if (!checkEmail(email)) {
-                        swal("Oops!", "Enter valid email address", "error");
+                        document.getElementById('message-f1').innerHTML = 'Enter valid email id.'
+                        functionAlert();
                     }
                     else if (!checkPhone(phone)) {
-                        swal("Oops!", "Enter valid phone number", "error");
+                        document.getElementById('message-f1').innerHTML = 'Enter valid phone number.'
+                        functionAlert();
                     }
                     else if (!checkGender(gender)){
-                        swal("Oops!", "Enter M/F for gender", "error");
+                        document.getElementById('message-f1').innerHTML = 'Enter M/F for gender.'
+                        functionAlert();
                     }
                     else {                    
                         input = JSON.stringify({
