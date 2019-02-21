@@ -9,6 +9,7 @@ var queryString = decodeURIComponent(window.location.search);
             document.getElementById("back").innerHTML = '<a href="partman.html?clubName='+club[1]+'&eventName='+queries[1]+'"><i class="arrowbig left"></i></a>'
             $(document).ready(function (){
                 $("#evload").click(function() {
+                    document.getElementById('showd').style.visibility = 'hidden';
                     $.ajax({
                         type: "POST",
                         url: "http://206.189.133.125/api/v1/simple-projection/project-all",

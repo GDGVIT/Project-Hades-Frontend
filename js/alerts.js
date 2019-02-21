@@ -7,6 +7,15 @@ function functionAlertf1(msg, myYes) {
     confirmBox.find("#yes-f1").click(myYes);
     confirmBox.show();
 }
+function functionAlert(msg, myYes) {
+    var confirmBox = $("#confirm-f1");
+    confirmBox.find("#message-f1").text(msg);
+    confirmBox.find("#yes-f1").unbind().click(function() {
+       confirmBox.hide();
+    });
+    confirmBox.find("#yes-f1").click(myYes);
+    confirmBox.show();
+}
 function functionAlertf2(msg, myYes) {
     var confirmBox = $("#confirm-f2");
     confirmBox.find("#message-f2").text(msg);

@@ -14,112 +14,148 @@ var queryString = decodeURIComponent(window.location.search);
                     var phone = document.getElementById("phone");
                     var gender = document.getElementById("gender");
                     if (!checkName(document.getElementById("ename"))) {
-                        swal("Oops!", "Enter valid Event Name", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Event Name'
+                        functionAlert();
                     }
                     else if (document.getElementById("todate").value.length == 0){
-                        swal("Oops!", "Enter valid End Date", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid End Date'
+                        functionAlert();
                     }
                     else if (document.getElementById("fdate").value.length == 0){
-                        swal("Oops!", "Enter valid Start Date", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Start Date'
+                        functionAlert();
                     }
                     else if (document.getElementById("totime").value.length == 0){
-                        swal("Oops!", "Enter valid End Time", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid End Time'
+                        functionAlert();
                     }
                     else if (document.getElementById("ftime").value.length == 0){
-                        swal("Oops!", "Enter valid Start Time", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Start Time'
+                        functionAlert();
                     }
                     else if (!checkBudget(document.getElementById("budget"))){
-                        swal("Oops!", "Enter valid Budget", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Budget'
+                        functionAlert();
                     }
                     else if (document.getElementById("desc").value.length == 0){
-                        swal("Oops!", "Enter valid Description", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Description'
+                        functionAlert();
                     }
                     else if (document.getElementById("cat").value.length == 0){
-                        swal("Oops!", "Enter valid Category", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Category'
+                        functionAlert();
                     }
                     else if (document.getElementById("ven").value.length == 0){
-                        swal("Oops!", "Enter valid Venue", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Venue'
+                        functionAlert();
                     }
                     else if (!checkBudget(document.getElementById("att"))){
-                        swal("Oops!", "Enter valid Number of Attendees", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Number of Attendees'
+                        functionAlert();
                     }
                     else if (!checkBudget(document.getElementById("exp"))){
-                        swal("Oops!", "Enter valid Number of Expected Participants", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Number of Expected Participants'
+                        functionAlert();
                     }
                     else if (!checkName(document.getElementById("facn"))){
-                        swal("Oops!", "Enter valid Faculty Name", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Faculty Name'
+                        functionAlert();
                     }
                     else if (!checkBudget(document.getElementById("facr"))){
-                        swal("Oops!", "Enter valid Faculty Number", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Faculty Number'
+                        functionAlert();
                     }
                     else if (!checkEmail(document.getElementById("facem"))){
-                        swal("Oops!", "Enter valid Faculty Email Address", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Faculty Email Address'
+                        functionAlert();
                     }
                     else if (!checkPhone(document.getElementById("facp"))){
-                        swal("Oops!", "Enter valid Faculty Phone Number", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Faculty Phone Number'
+                        functionAlert();
                     }
                     else if (!checkGender(document.getElementById("facg"))){
-                        swal("Oops!", "Enter M/F for Faculty Gender", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter M/F for Faculty Gender'
+                        functionAlert();
                     }
                     else if (!checkName(document.getElementById("stun"))){
-                        swal("Oops!", "Enter valid Student Coordinator Name", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Student Coordinator Name'
+                        functionAlert();
                     }
                     else if (document.getElementById("stur").value.length == 0){
-                        swal("Oops!", "Enter valid Student Coordinator Registration Number", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Student Coordinator Registration Number'
+                        functionAlert();
                     }
                     else if (!checkEmail(document.getElementById("stuem"))){
-                        swal("Oops!", "Enter valid Student Coordinator Email Address", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Student Coordinator Email Address'
+                        functionAlert();
                     }
                     else if (!checkPhone(document.getElementById("stup"))){
-                        swal("Oops!", "Enter valid Student Coordinator Phone Number", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Student Coordinator Phone Number'
+                        functionAlert();
                     }
                     else if (!checkGender(document.getElementById("stug"))){
-                        swal("Oops!", "Enter M/F for Student Coordinator Gender", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter M/F for Student Coordinator Gender'
+                        functionAlert();
                     }
                     else if (!checkName(document.getElementById("cgn"))){
-                        swal("Oops!", "Enter valid Chief Guest Name", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Chief Guest Name'
+                        functionAlert();
                     }
                     else if (!checkEmail(document.getElementById("cgem"))){
-                        swal("Oops!", "Enter valid Chief Guest Email Address", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Chief Guest Email Address'
+                        functionAlert();
                     }
                     else if (!checkPhone(document.getElementById("cgp"))){
-                        swal("Oops!", "Enter valid Chief Guest Phone Number", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Chief Guest Phone Number'
+                        functionAlert();
                     }
                     else if (!checkGender(document.getElementById("cgg"))){
-                        swal("Oops!", "Enter M/F for Chief Guest Gender", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter M/F for Chief Guest Gender'
+                        functionAlert();
                     }
                     else if (document.getElementById("cgs").value.length == 0){
-                        swal("Oops!", "Enter valid Stake of Chief Guest", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Stake of Chief Guest'
+                        functionAlert();
                     }
                     else if (document.getElementById("cgl").value.length == 0){
-                        swal("Oops!", "Enter valid Location of Stay for Chief Guest", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Location of Stay for Chief Guest'
+                        functionAlert();
                     }
                     else if (document.getElementById("pro").value.length == 0){
-                        swal("Oops!", "Enter valid PRO Request", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid PRO Request'
+                        functionAlert();
                     }
                     else if (document.getElementById("cer").value.length == 0){
-                        swal("Oops!", "Enter valid Campus Engineer Request", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Campus Engineer Request'
+                        functionAlert();
                     }
                     else if (document.getElementById("dur").value.length == 0){
-                        swal("Oops!", "Enter valid Event Duration", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Event Duration'
+                        functionAlert();
                     }
                     else if (!checkName(document.getElementById("msn"))){
-                        swal("Oops!", "Enter valid Main Sponsor Name", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Main Sponsor Name'
+                        functionAlert();
                     }
                     else if (!checkEmail(document.getElementById("msem"))){
-                        swal("Oops!", "Enter valid Main Sponsor Email Address", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Main Sponsor Email Address'
+                        functionAlert();
                     }
                     else if (!checkPhone(document.getElementById("msp"))){
-                        swal("Oops!", "Enter valid Main Sponsor Phone Number", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Main Sponsor Phone Number'
+                        functionAlert();
                     }
                     else if (!checkGender(document.getElementById("msg"))){
-                        swal("Oops!", "Enter M/F for Main Sponsor Gender", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter M/F for Main Sponsor Gender'
+                        functionAlert();
                     }
                     else if (document.getElementById("mss").value.length == 0){
-                        swal("Oops!", "Enter valid Stake of Main Sponsor", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Stake of Main Sponsor'
+                        functionAlert();
                     }
                     else if (document.getElementById("msl").value.length == 0){
-                        swal("Oops!", "Enter valid Location of Stay for Main Sponsor", "error");
+                        document.getElementById("message-f1").innerHTML = 'Enter valid Location of Stay for Main Sponsor'
+                        functionAlert();
                     }
                     else {     
                         input = JSON.stringify({"event":{
