@@ -35,7 +35,7 @@ html, body {
     body {
         background-color: #f7f7f7;
         max-width: 480px;
-        height: 640px;
+        height: 100%;
         margin:auto;
         margin-top: auto;
         margin-bottom: auto;
@@ -1082,5 +1082,25 @@ button:focus {
         margin-top:2vw;
         width: 10vw;
         font-size: 2vw;
+    }
+}
+@media only screen and (min-width:1000px) {
+    .confirm {
+        border: 1px solid #2c7cff;
+        margin-top: 10vw;
+        position: fixed;
+        border-radius: 10px;
+        font-family: sans-serif;
+        left: 50%;
+        margin-left: -10vw;
+        padding:2vw 2px;
+        font-size:1vw;
+        width:20vw
+    }
+    .confirm button {
+        padding: 1vw;
+        margin-top:1vw;
+        width: 5vw;
+        font-size: 1vw;
     }
 }
