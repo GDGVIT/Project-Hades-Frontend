@@ -21,7 +21,7 @@ $("#exportall-c1").click(function(){
         const a = document.createElement('a');
         a.setAttribute('hidden','');
         a.setAttribute('href',url);
-        a.setAttribute('download','download.csv');
+        a.setAttribute('download',''+queries[1]+'_registeredall.csv');
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -46,7 +46,7 @@ $("#exportall-c2").click(function(){
         const a = document.createElement('a');
         a.setAttribute('hidden','');
         a.setAttribute('href',url);
-        a.setAttribute('download','download.csv');
+        a.setAttribute('download',''+queries[1]+'_registeredgirls.csv');
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -71,7 +71,7 @@ $("#exportall-c3").click(function(){
         const a = document.createElement('a');
         a.setAttribute('hidden','');
         a.setAttribute('href',url);
-        a.setAttribute('download','download.csv');
+        a.setAttribute('download',''+queries[1]+'_registeredboys.csv');
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -94,7 +94,7 @@ $("#exportpresent-c1").click(function(){
         const a = document.createElement('a');
         a.setAttribute('hidden','');
         a.setAttribute('href',url);
-        a.setAttribute('download','download.csv');
+        a.setAttribute('download',''+queries[1]+'_presentall.csv');
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -119,7 +119,7 @@ $("#exportpresent-c2").click(function(){
         const a = document.createElement('a');
         a.setAttribute('hidden','');
         a.setAttribute('href',url);
-        a.setAttribute('download','download.csv');
+        a.setAttribute('download',''+queries[1]+'_presentgirls.csv');
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -144,7 +144,7 @@ $("#exportpresent-c3").click(function(){
         const a = document.createElement('a');
         a.setAttribute('hidden','');
         a.setAttribute('href',url);
-        a.setAttribute('download','download.csv');
+        a.setAttribute('download',''+queries[1]+'_presentboys.csv');
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -167,7 +167,7 @@ $("#exportabsent-c1").click(function(){
         const a = document.createElement('a');
         a.setAttribute('hidden','');
         a.setAttribute('href',url);
-        a.setAttribute('download','download.csv');
+        a.setAttribute('download',''+queries[1]+'_absentall.csv');
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -192,7 +192,7 @@ $("#exportabsent-c2").click(function(){
         const a = document.createElement('a');
         a.setAttribute('hidden','');
         a.setAttribute('href',url);
-        a.setAttribute('download','download.csv');
+        a.setAttribute('download',''+queries[1]+'_absentgirls.csv');
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -217,7 +217,7 @@ $("#exportabsent-c3").click(function(){
         const a = document.createElement('a');
         a.setAttribute('hidden','');
         a.setAttribute('href',url);
-        a.setAttribute('download','download.csv');
+        a.setAttribute('download',''+queries[1]+'_absentboys.csv');
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
