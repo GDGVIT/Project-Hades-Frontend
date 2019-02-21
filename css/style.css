@@ -1036,3 +1036,51 @@ input:not + label {
 button:focus {
     outline: none;
 }
+.confirm {
+    display: none;
+    background-color: rgb(44, 124, 255);
+    color: white;
+    font-size:2vw;
+    border: 1px solid #2c7cff;
+    margin-top: 20vw;
+    position: fixed;
+    border-radius: 10px;
+    font-family: sans-serif;
+    width: 35vw;
+    left: 50%;
+    margin-left: -18vw;
+    padding:5vw 12px;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 1;
+}
+.confirm button {
+    background-color: white;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid #2c7cff;
+    padding: 1vw;
+    margin-top:2vw;
+    text-align: center;
+    width: 5vw;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+.confirm .message {
+    text-align: center;
+}
+@media only screen and (max-width:500px) {
+    .confirm {
+        font-size:3vw;
+        margin-top: 25vw;
+        width: 50vw;
+        margin-left: -25vw;
+        padding:4vw 4vw;
+    }
+    .confirm button {
+        padding: 1.5vw;
+        margin-top:2vw;
+        width: 10vw;
+        font-size: 2vw;
+    }
+}

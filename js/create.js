@@ -16,19 +16,19 @@ var queryString = decodeURIComponent(window.location.search);
                     var phone = document.getElementById("phone");
                     var gender = document.getElementById("gender");
                     if (!checkName(name)) {
-                        swal("Oops!", "Enter valid name", "error");
+                        functionAlertf1();
                     }
                     else if (regno.value.length == 0){
-                        swal("Oops!", "Enter valid registration number", "error");
+                        functionAlertf2();
                     }
                     else if (!checkEmail(email)) {
-                        swal("Oops!", "Enter valid email address", "error");
+                        functionAlertf3();
                     }
                     else if (!checkPhone(phone)) {
-                        swal("Oops!", "Enter valid phone number", "error");
+                        functionAlertf4();
                     }
                     else if (!checkGender(gender)){
-                        swal("Oops!", "Enter M/F for gender", "error");
+                        functionAlertf5();
                     }
                     else {                    
                         input = JSON.stringify({
