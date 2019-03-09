@@ -17,94 +17,126 @@
         </div>
         <div class="row">
             <form class="tform" id="createev">
-                <div class="field r6">
-                    <input type="text" name="ename" id="ename" required placeholder="Devfest">
-                    <label for="ename">Name of Event</label>
-                </div>         
-                <div class="field r8">
-                    <input type="text" id="fdate" name="fdate" required placeholder="31st March">
-                    <label for="fdate">Start Date</label>
-                </div> 
-                <div class="field r7">
-                    <input type="text" id="todate" name="todate" required placeholder="26th June">
-                    <label for="todate">End Date</label>
-                    <div class="confirm" id="confirm-f1">
-                             <div class="message" id="message-f1">Enter valid name.</div>
-                             <button class="yes" id="yes-f1">OK</button>
+                <div class="row">
+                    <button id="evdet1" style="background-color: inherit; border: none;"><p class="dscev">Event Details <i class="arrow down" id="showd"></i></p></button>
+                    <div id="part1">
+                        <div class="field r6">
+                            <input type="text" name="ename" id="ename" required placeholder="Devfest">
+                            <label for="ename">Name of Event</label>
+                        </div>         
+                        <div class="field r8">
+                            <input type="text" id="fdate" name="fdate" required placeholder="31st March">
+                            <label for="fdate">Start Date</label>
+                        </div> 
+                        <div class="field r7">
+                            <input type="text" id="todate" name="todate" required placeholder="26th June">
+                            <label for="todate">End Date</label>
+                            <div class="confirm" id="confirm-f1">
+                                     <div class="message" id="message-f1">Enter valid name.</div>
+                                     <button class="yes" id="yes-f1">OK</button>
+                            </div>
+                        </div>
+                        <div class="field r8">
+                            <input type="text" id="ftime" name="ftime" required placeholder="12 PM">
+                            <label for="ftime">Start Time</label>
+                        </div>
+                        <div class="field r7">
+                            <input type="text" id="totime" name="totime" required placeholder="12 PM">
+                            <label for="totime">End Time</label>
+                        </div>
+                        <div class="field r5">
+                            <input type="text" id="budget" name="budget" required placeholder="198900">
+                            <label for="budget">Budget</label>
+                        </div>
+                        <div class="field r9">
+                            <input type="text" name="desc" id="desc" required placeholder="Technical Event">
+                            <label for="desc">Description</label>
+                        </div>
+                        <div class="field r7">
+                            <input type="text" name="cat" id="cat" required placeholder="Technical">
+                            <label for="cat">Category</label>
+                        </div>
+                        <div class="field r4">
+                            <input type="text" name="ven" id="ven" required placeholder="Kamaraj">
+                            <label for="ven">Venue</label>
+                        </div>
+        <div class="field r11">
+                            <input type="text" name="exp" id="exp" required placeholder="1600">
+                            <label for="exp">Expected Participants</label>
+                        </div>
+                        <div class="field r6">
+                            <input type="text" name="pro" id="pro" required placeholder="ABCDEFGHIJKLMNOPQRSTUVWXYZ">
+                            <label for="pro">PRO REquest</label>
+                        </div>
+                        <div class="field r12">
+                            <input type="text" name="cer" id="cer" required placeholder="ABCDEFG, HIJ, KLMNOPQ, RSTUV, WXYZ">
+                            <label for="cer">campus engineer request</label>
+                        </div>
+                        <div class="field r8">
+                            <input type="text" name="dur" id="dur" required placeholder="3 Months">
+                            <label for="dur">Duration</label>
+                        </div>
                     </div>
                 </div>
-                <div class="field r8">
-                    <input type="text" id="ftime" name="ftime" required placeholder="12 PM">
-                    <label for="ftime">Start Time</label>
-                </div>
-                <div class="field r7">
-                    <input type="text" id="totime" name="totime" required placeholder="12 PM">
-                    <label for="totime">End Time</label>
-                </div>
-                <div class="field r5">
-                    <input type="text" id="budget" name="budget" required placeholder="198900">
-                    <label for="budget">Budget</label>
-                </div>
-                <div class="field r9">
-                    <input type="text" name="desc" id="desc" required placeholder="Technical Event">
-                    <label for="desc">Description</label>
-                </div>
-                <div class="field r7">
-                    <input type="text" name="cat" id="cat" required placeholder="Technical">
-                    <label for="cat">Category</label>
-                </div>
-                <div class="field r4">
-                    <input type="text" name="ven" id="ven" required placeholder="Kamaraj">
-                    <label for="ven">Venue</label>
-                </div>
+                
+<!--
                 <div class="field r9">
                     <input type="text" name="att" id="att" required placeholder="1500">
                     <label for="att">Attendance</label>
                 </div>
-                <div class="field r11">
-                    <input type="text" name="exp" id="exp" required placeholder="1600">
-                    <label for="exp">Expected Participants</label>
+-->
+                <div class="row">
+                    <button id="evdet2" style="background-color: inherit; border: none;"><p class="dscev">Faculty Coordinator Details <i class="arrow down" id="showd"></i></p></button>
+                    <div id="part2">
+                        <div class="field r12">
+                            <input type="text" name="facn" id="facn" required placeholder="Kalyanaraman P">
+                            <label for="facn">Faculty Coordinator: Name</label>
+                        </div>
+                        <div class="field r13">
+                            <input type="text" name="facr" id="facr" required placeholder="10001">
+                            <label for="facr">faculty coordinator: ID</label>
+                        </div>
+                        <div class="field r12">
+                            <input type="text" name="facem" id="facem" required placeholder="kalyanaraman.p@vit.ac.in">
+                            <label for="facem">faculty coordinator: email</label>
+                        </div>           
+                        <div class="field r14">
+                            <input type="text" name="facp" id="facp" required placeholder="9874125630">
+                            <label for="facp">faculty coordinator: Phone</label>
+                        </div>     
+                        <div class="field r15">
+                            <input type="text" name="facg" id="facg" required placeholder="M/F">
+                            <label for="facg">faculty coordinator: gender</label>
+                        </div>
+                    </div>
                 </div>
-                <div class="field r12">
-                    <input type="text" name="facn" id="facn" required placeholder="Kalyanaraman P">
-                    <label for="facn">Faculty Coordinator: Name</label>
+                <div class="row">
+                    <button id="evdet3" style="background-color: inherit; border: none;"><p class="dscev">Student Coordinator Details <i class="arrow down" id="showd"></i></p></button>
+                    <div id="part3">
+                        <div class="field r12">
+                            <input type="text" name="stun" id="stun" required placeholder="Angad Sharma">
+                            <label for="stun">Student Coordinator: Name</label>
+                        </div>
+                        <div class="field r13">
+                            <input type="text" name="stur" id="stur" required placeholder="17BCE2009">
+                            <label for="stur">Student coordinator: ID</label>
+                        </div>
+                        <div class="field r12">
+                            <input type="text" name="stuem" id="stuem" required placeholder="angad.sharma@vit.ac.in">
+                            <label for="stuem">Student coordinator: email</label>
+                        </div>           
+                        <div class="field r14">
+                            <input type="text" name="stup" id="stup" required placeholder="9874125630">
+                            <label for="stup">Student coordinator: Phone</label>
+                        </div>     
+                        <div class="field r15">
+                            <input type="text" name="stug" id="stug" required placeholder="M/F">
+                            <label for="stug">Student coordinator: gender</label>
+                        </div>
+                    </div>
                 </div>
-                <div class="field r13">
-                    <input type="text" name="facr" id="facr" required placeholder="10001">
-                    <label for="facr">faculty coordinator: ID</label>
-                </div>
-                <div class="field r12">
-                    <input type="text" name="facem" id="facem" required placeholder="kalyanaraman.p@vit.ac.in">
-                    <label for="facem">faculty coordinator: email</label>
-                </div>           
-                <div class="field r14">
-                    <input type="text" name="facp" id="facp" required placeholder="9874125630">
-                    <label for="facp">faculty coordinator: Phone</label>
-                </div>     
-                <div class="field r15">
-                    <input type="text" name="facg" id="facg" required placeholder="M/F">
-                    <label for="facg">faculty coordinator: gender</label>
-                </div>
-                <div class="field r12">
-                    <input type="text" name="stun" id="stun" required placeholder="Angad Sharma">
-                    <label for="stun">Student Coordinator: Name</label>
-                </div>
-                <div class="field r13">
-                    <input type="text" name="stur" id="stur" required placeholder="17BCE2009">
-                    <label for="stur">Student coordinator: ID</label>
-                </div>
-                <div class="field r12">
-                    <input type="text" name="stuem" id="stuem" required placeholder="angad.sharma@vit.ac.in">
-                    <label for="stuem">Student coordinator: email</label>
-                </div>           
-                <div class="field r14">
-                    <input type="text" name="stup" id="stup" required placeholder="9874125630">
-                    <label for="stup">Student coordinator: Phone</label>
-                </div>     
-                <div class="field r15">
-                    <input type="text" name="stug" id="stug" required placeholder="M/F">
-                    <label for="stug">Student coordinator: gender</label>
-                </div>
+                
+<!--
                 <div class="field r16">
                     <input type="text" name="cgn" id="cgn" required placeholder="Iggy Azalea">
                     <label for="cgn">Chief guest: Name</label>
@@ -128,19 +160,7 @@
                 <div class="field r15">
                     <input type="text" name="cgl" id="cgl" required placeholder="ITC Fortune Park">
                     <label for="cgl">Chief Guest: location of stay</label>
-                </div>   
-                <div class="field r6">
-                    <input type="text" name="pro" id="pro" required placeholder="ABCDEFGHIJKLMNOPQRSTUVWXYZ">
-                    <label for="pro">PRO REquest</label>
-                </div>
-                <div class="field r12">
-                    <input type="text" name="cer" id="cer" required placeholder="ABCDEFG, HIJ, KLMNOPQ, RSTUV, WXYZ">
-                    <label for="cer">campus engineer request</label>
-                </div>
-                <div class="field r8">
-                    <input type="text" name="dur" id="dur" required placeholder="3 Months">
-                    <label for="dur">Duration</label>
-                </div>
+                </div>  
                 <div class="field r17">
                     <input type="text" name="msn" id="msn" required placeholder="Iggy Azalea">
                     <label for="msn">Main Sponsor: Name</label>
@@ -165,6 +185,7 @@
                     <input type="text" name="msl" id="msl" required placeholder="ITC Fortune Park">
                     <label for="msl">Main Sponsor: location of stay</label>
                 </div>   
+-->
                 <button class="sub" type="submit" form="createev" id="load">
                     Submit<i class="icon ion-ios-checkmark" style="border: none;"></i>
                 </button>
@@ -177,5 +198,46 @@
         <script type="text/javascript" src="js/constraints.js"></script>
         <script type="text/javascript" src="js/alerts.js"></script>
         <script type="text/javascript" src="js/addev.js"></script>
+        <script type="text/javascript">
+            det1=0
+            det2=0
+            det3=0
+            $("#evdet1").click(function(){
+                if(det1==0)
+                    {
+                        det1=1;
+                        document.getElementById("part1").style.display="none";
+                    }
+                else
+                    {
+                        det1=0;
+                        document.getElementById("part1").style.display="block";
+                    }
+            })
+            $("#evdet2").click(function(){
+                if(det2==0)
+                    {
+                        det2=1;
+                        document.getElementById("part2").style.display="none";
+                    }
+                else
+                    {
+                        det2=0;
+                        document.getElementById("part2").style.display="block";
+                    }
+            })
+            $("#evdet3").click(function(){
+                if(det3==0)
+                    {
+                        det3=1;
+                        document.getElementById("part3").style.display="none";
+                    }
+                else
+                    {
+                        det3=0;
+                        document.getElementById("part3").style.display="block";
+                    }
+            })
+        </script>
     </body>
 </html>
