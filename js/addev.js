@@ -49,10 +49,10 @@ var queryString = decodeURIComponent(window.location.search);
                         document.getElementById("message-f1").innerHTML = 'Enter valid Venue'
                         functionAlert();
                     }
-                    else if (!checkBudget(document.getElementById("att"))){
-                        document.getElementById("message-f1").innerHTML = 'Enter valid Number of Attendees'
-                        functionAlert();
-                    }
+//                    else if (!checkBudget(document.getElementById("att"))){
+//                        document.getElementById("message-f1").innerHTML = 'Enter valid Number of Attendees'
+//                        functionAlert();
+//                    }
                     else if (!checkBudget(document.getElementById("exp"))){
                         document.getElementById("message-f1").innerHTML = 'Enter valid Number of Expected Participants'
                         functionAlert();
@@ -97,30 +97,30 @@ var queryString = decodeURIComponent(window.location.search);
                         document.getElementById("message-f1").innerHTML = 'Enter M/F for Student Coordinator Gender'
                         functionAlert();
                     }
-                    else if (!checkName(document.getElementById("cgn"))){
-                        document.getElementById("message-f1").innerHTML = 'Enter valid Chief Guest Name'
-                        functionAlert();
-                    }
-                    else if (!checkEmail(document.getElementById("cgem"))){
-                        document.getElementById("message-f1").innerHTML = 'Enter valid Chief Guest Email Address'
-                        functionAlert();
-                    }
-                    else if (!checkPhone(document.getElementById("cgp"))){
-                        document.getElementById("message-f1").innerHTML = 'Enter valid Chief Guest Phone Number'
-                        functionAlert();
-                    }
-                    else if (!checkGender(document.getElementById("cgg"))){
-                        document.getElementById("message-f1").innerHTML = 'Enter M/F for Chief Guest Gender'
-                        functionAlert();
-                    }
-                    else if (document.getElementById("cgs").value.length == 0){
-                        document.getElementById("message-f1").innerHTML = 'Enter valid Stake of Chief Guest'
-                        functionAlert();
-                    }
-                    else if (document.getElementById("cgl").value.length == 0){
-                        document.getElementById("message-f1").innerHTML = 'Enter valid Location of Stay for Chief Guest'
-                        functionAlert();
-                    }
+//                    else if (!checkName(document.getElementById("cgn"))){
+//                        document.getElementById("message-f1").innerHTML = 'Enter valid Chief Guest Name'
+//                        functionAlert();
+//                    }
+//                    else if (!checkEmail(document.getElementById("cgem"))){
+//                        document.getElementById("message-f1").innerHTML = 'Enter valid Chief Guest Email Address'
+//                        functionAlert();
+//                    }
+//                    else if (!checkPhone(document.getElementById("cgp"))){
+//                        document.getElementById("message-f1").innerHTML = 'Enter valid Chief Guest Phone Number'
+//                        functionAlert();
+//                    }
+//                    else if (!checkGender(document.getElementById("cgg"))){
+//                        document.getElementById("message-f1").innerHTML = 'Enter M/F for Chief Guest Gender'
+//                        functionAlert();
+//                    }
+//                    else if (document.getElementById("cgs").value.length == 0){
+//                        document.getElementById("message-f1").innerHTML = 'Enter valid Stake of Chief Guest'
+//                        functionAlert();
+//                    }
+//                    else if (document.getElementById("cgl").value.length == 0){
+//                        document.getElementById("message-f1").innerHTML = 'Enter valid Location of Stay for Chief Guest'
+//                        functionAlert();
+//                    }
                     else if (document.getElementById("pro").value.length == 0){
                         document.getElementById("message-f1").innerHTML = 'Enter valid PRO Request'
                         functionAlert();
@@ -133,31 +133,80 @@ var queryString = decodeURIComponent(window.location.search);
                         document.getElementById("message-f1").innerHTML = 'Enter valid Event Duration'
                         functionAlert();
                     }
-                    else if (!checkName(document.getElementById("msn"))){
-                        document.getElementById("message-f1").innerHTML = 'Enter valid Main Sponsor Name'
-                        functionAlert();
-                    }
-                    else if (!checkEmail(document.getElementById("msem"))){
-                        document.getElementById("message-f1").innerHTML = 'Enter valid Main Sponsor Email Address'
-                        functionAlert();
-                    }
-                    else if (!checkPhone(document.getElementById("msp"))){
-                        document.getElementById("message-f1").innerHTML = 'Enter valid Main Sponsor Phone Number'
-                        functionAlert();
-                    }
-                    else if (!checkGender(document.getElementById("msg"))){
-                        document.getElementById("message-f1").innerHTML = 'Enter M/F for Main Sponsor Gender'
-                        functionAlert();
-                    }
-                    else if (document.getElementById("mss").value.length == 0){
-                        document.getElementById("message-f1").innerHTML = 'Enter valid Stake of Main Sponsor'
-                        functionAlert();
-                    }
-                    else if (document.getElementById("msl").value.length == 0){
-                        document.getElementById("message-f1").innerHTML = 'Enter valid Location of Stay for Main Sponsor'
-                        functionAlert();
+//                    else if (!checkName(document.getElementById("msn"))){
+//                        document.getElementById("message-f1").innerHTML = 'Enter valid Main Sponsor Name'
+//                        functionAlert();
+//                    }
+//                    else if (!checkEmail(document.getElementById("msem"))){
+//                        document.getElementById("message-f1").innerHTML = 'Enter valid Main Sponsor Email Address'
+//                        functionAlert();
+//                    }
+//                    else if (!checkPhone(document.getElementById("msp"))){
+//                        document.getElementById("message-f1").innerHTML = 'Enter valid Main Sponsor Phone Number'
+//                        functionAlert();
+//                    }
+//                    else if (!checkGender(document.getElementById("msg"))){
+//                        document.getElementById("message-f1").innerHTML = 'Enter M/F for Main Sponsor Gender'
+//                        functionAlert();
+//                    }
+//                    else if (document.getElementById("mss").value.length == 0){
+//                        document.getElementById("message-f1").innerHTML = 'Enter valid Stake of Main Sponsor'
+//                        functionAlert();
+//                    }
+//                    else if (document.getElementById("msl").value.length == 0){
+//                        document.getElementById("message-f1").innerHTML = 'Enter valid Location of Stay for Main Sponsor'
+//                        functionAlert();
                     }
                     else {     
+//                        input = JSON.stringify({"event":{
+//                         "clubName":club[1],
+//                         "name":$('#ename').val(),
+//                         "toDate":$('#todate').val(),
+//                         "fromDate":$('#fdate').val(),
+//                         "toTime":$('#totime').val(),
+//                         "fromTime":$('#ftime').val(),
+//                         "budget":$('#budget').val(),
+//                         "description":$('#desc').val(),
+//                         "category":$('#cat').val(),
+//                         "venue":$('#ven').val(),
+//                         "attendance":$('#att').val(),
+//                         "expectedParticipants":$('#exp').val(),
+//                         "facultyCoordinator":{
+//                            "name":$('#facn').val(),
+//                            "registrationNumber":$('#facr').val(),
+//                            "email":$('#facem').val(),
+//                            "phoneNumber":$('#facp').val(),
+//                            "gender":$('#facg').val(),
+//                            "eventsAttended":"ALL"
+//                         },
+//                         "studentCoordinator":{
+//                            "name":$('#stun').val(),
+//                            "registrationNumber":$('#stur').val(),
+//                            "email":$('#stuem').val(),
+//                            "phoneNumber":$('#stup').val(),
+//                            "gender":$('#stug').val(),
+//                            "eventsAttended":"ALL"
+//                         },
+//                         "guest":{
+//                            "name":$('#cgn').val(),
+//                            "email":$('#cgem').val(),
+//                            "phoneNumber":$('#cgp').val(),
+//                            "gender":$('#cgg').val(),
+//                            "stake":$('#cgs').val(),
+//                            "locationOfStay":$('#cgl').val()
+//                         },
+//                         "PROrequest":$('#pro').val(),
+//                         "campusEngineerRequest":$('#cer').val(),
+//                         "duration":$('#dur').val(),
+//                         "mainSponsor":{
+//                            "name":$('#msn').val(),
+//                            "email":$('#msem').val(),
+//                            "phoneNumber":$('#msp').val(),
+//                            "gender":$('#msg').val(),
+//                            "stake":$('#mss').val(),
+//                            "locationOfStay":$('#msl').val()
+//                         }
+//                        }})
                         input = JSON.stringify({"event":{
                          "clubName":club[1],
                          "name":$('#ename').val(),
@@ -169,7 +218,6 @@ var queryString = decodeURIComponent(window.location.search);
                          "description":$('#desc').val(),
                          "category":$('#cat').val(),
                          "venue":$('#ven').val(),
-                         "attendance":$('#att').val(),
                          "expectedParticipants":$('#exp').val(),
                          "facultyCoordinator":{
                             "name":$('#facn').val(),
@@ -187,25 +235,9 @@ var queryString = decodeURIComponent(window.location.search);
                             "gender":$('#stug').val(),
                             "eventsAttended":"ALL"
                          },
-                         "guest":{
-                            "name":$('#cgn').val(),
-                            "email":$('#cgem').val(),
-                            "phoneNumber":$('#cgp').val(),
-                            "gender":$('#cgg').val(),
-                            "stake":$('#cgs').val(),
-                            "locationOfStay":$('#cgl').val()
-                         },
                          "PROrequest":$('#pro').val(),
                          "campusEngineerRequest":$('#cer').val(),
-                         "duration":$('#dur').val(),
-                         "mainSponsor":{
-                            "name":$('#msn').val(),
-                            "email":$('#msem').val(),
-                            "phoneNumber":$('#msp').val(),
-                            "gender":$('#msg').val(),
-                            "stake":$('#mss').val(),
-                            "locationOfStay":$('#msl').val()
-                         }
+                         "duration":$('#dur').val()
                         }})
                         var frm = document.getElementById("createev").reset();
                         $.ajax({
