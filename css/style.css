@@ -679,7 +679,7 @@ input:focus + label {
 }
 .r7 input:not(:placeholder-shown) + label,
 .r7 input:focus + label {
-    width : 18vw;
+    width : 20vw;
 }
 .r8 input:not(:placeholder-shown) + label,
 .r8 input:focus + label {

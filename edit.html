@@ -13,110 +13,42 @@
         <div class="row">
             <div style="float: left; margin-left: 5vw" id="back">
             </div>
-            <div class="row hd2"><strong>Read</strong></div>
+            <div class="row hd2"><strong id="eventName">Attendee</strong></div>
         </div>
         <div class="row">
-            <p class="dscev">Form <i class="arrow down"></i></p> 
+            <button id="evload"><p class="dscev">Details <i class="arrow down" id="showd"></i></p></button> 
         </div>
-        <div class="row">
-            <form class="tform" id="update">
-                <div class="formcard">
-                    <div class="ans" id="aname">
-                    </div>
-                    <div class="attr">
-                        <label for="name">Name</label>
-                    </div>
-                </div>
-                <div class="formcard">
-                    <div class="ans" id="areg">
-                    </div>
-                    <div class="attr">
-                        <label for="name">Reg. No.</label>
-                    </div>
-                </div>
-                <div class="formcard">
-                    <div class="ans" id="aemail">
-                    </div>
-                    <div class="attr">
-                        <label for="name">Email</label>
-                    </div>
-                </div>
-                <div class="formcard">
-                    <div class="ans" id="aphone">
-                    </div>
-                    <div class="attr">
-                        <label for="name">Phone</label>
-                    </div>
-                </div>
-                <div class="formcard">
-                    <div class="ans" id="agend">
-                    </div>
-                    <div class="attr">
-                        <label for="name">Gender</label>
-                    </div>
-                </div>
-                <button class="sub" type="submit" form="create" id="load">
-                    Submit<i class="icon ion-ios-checkmark" style="border: none;"></i>
-                </button>
-                <button class="sub">
-                    Cancel
-                    <i class="icon ion-ios-close" style="border: none;"></i>
-                </button>
-            </form>
+        <div id="services">
         </div>
         <script type="text/javascript">
-            var queryString = decodeURIComponent(window.location.search);
-            queryString = queryString.substring(1);
-            var quer = queryString.split("&");
-            var queries = quer[2].split("=");
-            var event = quer[1].split("=");
-            var club = quer[0].split("=");
-            document.getElementById("back").innerHTML = '<a href="read.html?clubName='+club[1]+'&eventName='+event[1]+'"><i class="arrowbig left"></i></a>'
+            var address = decodeURIComponent(window.location.search);
+            address = address.substring(1);
+            total = address.split("&");
+            club = total[0].split("=");
+            event = total[1].split("=");
+            person = total[2].split("=");
+            document.getElementById("back").innerHTML = '<a href="read.html?clubName='+club[1]+'&eventName='+event[1]+'"><i class="arrowbig left"></i></a>';
+            input = JSON.stringify({
+                "query": {
+                    "key": "name",
+                    "Value": person[1]
+                }
+            })
             $(document).ready(function (){
-                enter = JSON.stringify({
-                    "query" : {
-                        "key" : "name",
-                        "Value" : queries[1]
-                    }
-                })
-                $.ajax({
-                        type: "POST",
-                        url: "http://68.183.80.71:80/api/v1/participants/read-attendee",
-                        data:enter
-                    }).done(function (data) {
-                    document.getElementById("aname").innerHTML = '<input type="text" id="name" required placeholder="'+data.rs[0].name+'">' 
-                    document.getElementById("areg").innerHTML = '<input type="text" id="regno" required placeholder="'+data.rs[0].registrationNumber+'">'
-                    document.getElementById("aemail").innerHTML = '<input type="text" id="email" required placeholder="'+data.rs[0].email+'">'
-                    document.getElementById("aphone").innerHTML = '<input type="text" id="phone" required placeholder="'+data.rs[0].phoneNumber+'">'
-                    document.getElementById("agend").innerHTML = '<input type="text" id="gender" required placeholder="'+data.rs[0].gender+'">'
-                });
-                $("#load").click(function(e) {
-                    e.preventDefault()
-                   input = JSON.stringify({
-                       "query":{
-                           "key" : $('#name').val(),
-                           "registrationNumber" : $('#regno').val(),
-                           "email" : $('#email').val(),
-                           "phone" : $('#phone').val(),
-                           "gender" : $('#gender').val(),
-                           "eventAttended" : "ALL",
-                           "eventName" : event[1]
-                       }
-                   })
-                    var frm = document.getElementById("update").reset();
-                    console.log(input);
+                $("#evload").click(function() {
                     $.ajax({
                         type: "POST",
-                        url: "http://68.183.80.71:80/api/v1/participants/create-attendee",
+                        url: "http://206.189.133.125/api/v1/participants/read-attendee",
                         data:input
                     }).done(function (data) {
-                        if(data.rs==="created"){
-                            swal("Yaay!", "You have created a new participant!", "success");
-                            location.href = "read.html?clubName="+club[1]+"&eventName="+event[1];
-                           }                           
+                        if (data.rs) {
+                            obj = data.rs[0];
+                            document.getElementById("services").innerHTML= '<div class="row"><div class="evcard"><img class="evphoto" src="color2c7cff.jpg"><div class="evdet"><strong class="evhd">Name</strong><br>'+obj.name+'</div><div class="rtarrow" style="float: right;"></div></div></div><div class="row"><div class="evcard"><img class="evphoto" src="color2c7cff.jpg"><div class="evdet"><strong class="evhd">Registration Number</strong><br>'+obj.registrationNumber+'</div><div class="rtarrow" style="float: right;"></div></div></div><div class="row"><div class="evcard"><img class="evphoto" src="color2c7cff.jpg"><div class="evdet"><strong class="evhd">Email</strong><br>'+obj.email+'</div><div class="rtarrow" style="float: right;"></div></div></div><div class="row"><div class="evcard"><img class="evphoto" src="color2c7cff.jpg"><div class="evdet"><strong class="evhd">Phone Number</strong><br>'+obj.phoneNumber+'</div><div class="rtarrow" style="float: right;"></div></div></div><div class="row"><div class="evcard"><img class="evphoto" src="color2c7cff.jpg"><div class="evdet"><strong class="evhd">Gender</strong><br>'+obj.gender+'</div><div class="rtarrow" style="float: right;"></div></div></div>';
+                            document.getElementById("showd").style.visibility="hidden";
+                        }
                     });
                 })
-            })
+            }) 
         </script>
     </body>
 </html>
