@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/exportstyle.css">
         <link rel="stylesheet" type="text/css" href="css/grid.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <title>HADES</title>
@@ -14,8 +14,43 @@
             <div class="row hd2"><strong>Export</strong></div>
         </div>
         <div class="row">
-            <p class="dscev">CSV</p> 
+            <form id="screen">
+                <div class="sellabel">
+                    <select name="gender" id="gender" class="select">
+                        <option value="1" selected>Only Boys</option>
+                        <option value="1">Only Boys</option>
+                        <option value="2">Only Girls</option>
+                        <option value="3">Both Boys and Girls</option>
+                    </select>
+                    <div class="confirm" id="confirm-f1">
+                             <div class="message" id="message-f1"></div>
+                             <button class="yes" id="yes-f1">OK</button>
+                    </div>
+                </div>
+                <div class="sellabel">
+                    <select name="pres" id="pres" class="select">
+                        <option value="1" selected>Export All</option>
+                        <option value="1">Export All</option>
+                        <option value="2">Export Present</option>
+                        <option value="3">Export Absent</option>
+                    </select>
+                </div>
+                <label class="radlabel">CSV
+                    <input type="radio" name="format" id="format1" value="1" checked>
+                    <span class="check"></span>
+                </label>
+                <label class="radlabel">JSON
+                    <input type="radio" name="format" id="format2" value="2">
+                    <span class="check"></span>
+                </label>
+                <button class="exsub" type="submit" form="screen" id="load">
+                    Download              
+                </button>
+            </form>
+<!--            <p class="dscev">CSV</p>-->
         </div>
+<!--
+        <select></select>
         <div class="row">
             <a class="evcard" id="exportall-c1">
                 <img class="evphoto" src="color2c7cff.jpg">
@@ -131,7 +166,9 @@
                 </div>
             </a>
         </div>
-        <script type="text/javascript" src="js/export.js">
-        </script>
+-->
+        <script type="text/javascript" src="js/export.js"></script>
+        <script type="text/javascript" src="js/alerts.js"></script>
+        <script type="text/javascript" src="js/input-dropdown.js"></script>
     </body>
 </html>
