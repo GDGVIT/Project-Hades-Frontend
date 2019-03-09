@@ -1105,3 +1105,7 @@ button:focus {
         font-size: 1vw;
     }
 }
+
+*{
+    outline: none;
+}

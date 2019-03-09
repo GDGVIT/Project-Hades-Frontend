@@ -54,8 +54,13 @@ var queryString = decodeURIComponent(window.location.search);
                             data:input
                         }).done(function (data) {
                             if(data.rs==="created"){
-                                swal("Success!", "You have created a new participant!", "success");
-                            }                           
+                                document.getElementById('message-f1').innerHTML = 'You have successfully created a participant'
+                                functionAlert();
+                            }   
+                            else{
+                                document.getElementById('message-f1').innerHTML = 'Sorry could not create a participant'
+                                functionAlert();
+                            }
                         });
                     }
                 }
