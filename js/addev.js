@@ -156,7 +156,7 @@ var queryString = decodeURIComponent(window.location.search);
 //                    else if (document.getElementById("msl").value.length == 0){
 //                        document.getElementById("message-f1").innerHTML = 'Enter valid Location of Stay for Main Sponsor'
 //                        functionAlert();
-                    }
+//                    }
                     else {     
 //                        input = JSON.stringify({"event":{
 //                         "clubName":club[1],
