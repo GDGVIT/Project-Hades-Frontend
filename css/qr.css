@@ -511,7 +511,7 @@ a {
     text-decoration: none;
 }
 .qrcode-text {
-  padding: 1vw;
+  padding: 2vw;
   margin-left: 20vw;
   vertical-align: middle;
   border-radius: 10px;
@@ -521,15 +521,15 @@ a {
 }
 
 .qrcode-text + .qrcode-text-btn {
-  width: 1.7em;
+/*  width: 1.7em;*/
   margin-left: 2vw;
   margin-top: 1.5vw;
   vertical-align: top;
 }
 .qrcode-text-btn {
   display: inline-block;
-  height: 4vw;
-  width: 4vw;
+  height: 6vw;
+  width: 6vw;
   background: url(../qr_icon.svg) 50% 50% no-repeat;
   cursor: pointer;
 }
