@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/grid.css">
+		<link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <title>HADES</title>
+    </head>
+    <body>
+        <div class="row">
+            <div style="float: left; margin-left: 5vw" id="back">
+            </div>
+            <div class="row hd2"><strong>Create Coupon</strong></div>
+        </div>
+        <div class="row">
+            <form class="tform" id="create">
+                <div class="field r2">
+                    <div class="confirm" id="confirm-f1">
+                             <div class="message" id="message-f1"></div>
+                             <button class="yes" id="yes-f1">OK</button>
+                    </div>
+                </div>
+                <div class="field r1">
+                    <input type="text" name="name" id="name" required placeholder="John Doe">
+                    <label for="name">Name</label>
+                </div>
+                <div class="field r9">
+                    <input type="text" name="desc" id="desc" required placeholder="Dinner">
+                    <label for="desc">Description</label>
+                </div>
+                <div class="field r1">
+                    <input type="numeric" name="day" id="day" required placeholder="2">
+                    <label for="day">Day</label>
+                </div>
+                <button class="sub" type="submit" form="create" id="load">
+                    Submit<i class="icon ion-ios-checkmark" style="border: none;"></i>
+                </button>
+                <button class="sub" type="reset" form="create">
+                    Cancel
+                    <i class="icon ion-ios-close" style="border: none;"></i>
+                </button>
+            </form>
+        </div>
+        <script type="text/javascript" src="js/constraints.js"></script>
+        <script type="text/javascript" src="js/alerts.js"></script>
+        <script type="text/javascript" src="js/createcoup.js"></script>
+    </body>
+</html>

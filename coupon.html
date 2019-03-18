@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/grid.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>HADES</title>
+    </head>
+    <body>
+        <div class="row">
+            <div style="float: left; margin-left: 5vw" id="back">
+            </div>
+            <div class="row hd2"><strong>Coupon Management</strong></div>
+        </div>
+<!--
+        <div class="row">
+            <p class="dscev">Functions <i class="arrow down"></i></p> 
+        </div>
+-->
+        <div id="functions"></div>
+        <script type="text/javascript">
+            var queryString = decodeURIComponent(window.location.search);
+            queryString = queryString.substring(1);
+            total = queryString.split("&");
+            club = total[0].split("=");
+            var queries = total[1].split("=");
+            document.getElementById("back").innerHTML = '<a href="events.html?clubName='+club[1]+'&eventName='+queries[1]+'"><i class="arrowbig left"></i></a>'
+            document.getElementById("functions").innerHTML = '<div class="row"><a href="createcoup.html?clubName='+club[1]+'&eventName=' + queries[1] + '" style="text-decoration: none;"><div class="evcard"><img class="evphoto" src="color2c7cff.jpg"><div class="evdet"><strong class="evhd">Create Coupon</strong><br>Create a new participant</div><div class="rtarrow" style="float: right;"><i class="arrowbig right"></i></div></div></a></div><div class="row"><a href="redeemcoup.html?clubName='+club[1]+'&eventName=' + queries[1] + '" style="text-decoration: none;"><div class="evcard"><img class="evphoto" src="color2c7cff.jpg"><div class="evdet"><strong class="evhd">Redeem Coupon</strong><br>Edit, delete and view</div><div class="rtarrow" style="float: right;"><i class="arrowbig right"></i></div></div></a></div><div class="row"><a href="markattend.html?clubName='+club[1]+'&eventName=' + queries[1] + '" style="text-decoration: none;"><div class="evcard"><img class="evphoto" src="color2c7cff.jpg"><div class="evdet"><strong class="evhd">Mark Attendance</strong><br>Edit, delete and view</div><div class="rtarrow" style="float: right;"><i class="arrowbig right"></i></div></div></a></div>'
+        </script>
+    </body>
+</html>

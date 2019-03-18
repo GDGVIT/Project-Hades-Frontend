@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/qr.css">
+        <link rel="stylesheet" type="text/css" href="css/grid.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js"></script>
+        <title>HADES</title>
+    </head>
+    <body>
+        <div class="row">
+            <div style="float: left; margin-left: 5vw" id="back">
+            </div>
+            <div class="row hd2"><strong>Redeem</strong></div>
+        </div>
+        <div class="row">
+            <form class="tform" id="create">
+                <div class="field r1">
+                    <input type=text class=qrcode-text id="email" name="email">
+                    <label class=qrcode-text-btn>
+                        <input type=file accept="image/*" capture=environment onchange="openQRCamera(this);" tabindex=-1>
+                    </label>
+                </div>
+                <div class="confirm" id="confirm-f1">
+                    <div class="message" id="message-f1"></div>
+                    <button class="yes" id="yes-f1">OK</button>
+                </div>
+                <button class="exsub" type="submit" form="create" id="load">
+                    Submit<i class="icon ion-ios-checkmark" style="border: none;"></i>
+                </button>
+            </form>
+        </div>
+        <script type="text/javascript">
+            var queryString = decodeURIComponent(window.location.search);
+            queryString = queryString.substring(1);
+            total = queryString.split("&");
+            club = total[0].split("=");
+            var queries = total[1].split("=");
+            coup = total[2].split("=");
+            day = total[3].split("=");
+            document.getElementById("back").innerHTML = '<a href="redeemcoup.html?clubName='+club[1]+'&eventName='+queries[1]+'"><i class="arrowbig left"></i></a>';
+            function openQRCamera(node) {
+                var reader = new FileReader();
+                reader.onload = function() {
+                    node.value = "";
+                    qrcode.callback = function(res) {
+                        if(res instanceof Error) {
+                            alert("No QR code found. Please make sure the QR code is within the camera's frame and try again.");
+                        } else {
+                            node.parentNode.previousElementSibling.value = res;
+                        }
+                    };
+                    qrcode.decode(reader.result);
+                };
+                reader.readAsDataURL(node.files[0]);
+            }
+            $(document).ready(function (){
+                $("#load").click(function(e) {
+                    e.preventDefault();
+                    redeem();
+                })
+                function redeem(){
+                    var email = document.getElementById("email")
+                    if(email.value.length==0){
+                        alert("Scan QR code first");
+//                        document.getElementById("message-f1").innerHTML = 'Scan the QR first';
+//                        functionAlert();
+                    }
+                    else{
+                        input = JSON.stringify({
+                            "attendance": {
+                                "couponName": coup[1],
+                                "day": day[1],
+                                "email": $('#email').val(),
+                                "eventName": queries[1]
+                            }
+                        })
+                        $.ajax({
+                            type: "POST",
+                            url: "http://206.189.133.125/api/v1/coupons/redeem-coupon",
+                            data:input
+                        }).done(function (data) {
+                            if(data.rs){
+                                document.getElementById("message-f1").innerHTML = data.rs;
+                                functionAlert();
+                            }                           
+                        });
+//                        console.log(input)
+                    }
+                }
+            })
+        </script>
+<!--
+        <script type="text/javascript" src="js/constraints.js"></script>
+        <script type="text/javascript" src="js/alerts.js"></script>
+-->
+    </body>
+</html>

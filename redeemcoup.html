@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/grid.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>HADES</title>
+    </head>
+    <body>
+        <div class="row">
+            <div style="float: left; margin-left: 5vw" id="back">
+            </div>
+            <div class="row hd2"><strong>Redeem Coupon</strong></div>
+        </div>
+<!--
+        <div class="row">
+            <p class="dscev">Functions <i class="arrow down"></i></p> 
+        </div>
+-->
+        <div class="row">
+            <button id="evload"><p class="dscev">View <i class="arrow down" id="showd"></i></p></button> 
+        </div>
+        <div id="hola"></div>
+        <script type="text/javascript">
+            var queryString = decodeURIComponent(window.location.search);
+            queryString = queryString.substring(1);
+            total = queryString.split("&");
+            club = total[0].split("=");
+            var queries = total[1].split("=");
+            document.getElementById("back").innerHTML = '<a href="coupon.html?clubName='+club[1]+'&eventName='+queries[1]+'"><i class="arrowbig left"></i></a>'
+            $(document).ready(function (){
+                $("#evload").click(function() {
+                    document.getElementById("hola").style.visibility = "visible";
+                    input=JSON.stringify({"event":queries[1]})
+                    $.ajax({
+                        type: "POST",
+                        url: "http://206.189.133.125/api/v1/coupons/view-schema",
+                        data:input
+                    }).done(function (data) {
+                        if (data.rs) {
+                            var txt="";
+                            for (var i=0;i<data.rs.length; i++){
+                                var obj = data.rs[i];
+                                txt = txt + '<a href="redeem.html?clubName='+club[1]+'&eventName=' + queries[1] + '&coupName='+obj.name+'&day='+obj.day+'" style="text-decoration: none;"><div class="row"><div class="evcard"><img class="evphoto" src="color2c7cff.jpg"><div class="evdet"><strong class="evhd">' + obj.name + '</strong><br>Day '+obj.day+'</div><div class="rtarrow" style="float: right;"><i class="arrowbig right"></i></div></div></div></a>';
+                            }
+                            document.getElementById("hola").innerHTML= txt;
+                             document.getElementById("showd").style.visibility="hidden";
+                        }
+                    });
+                })
+            }) 
+        </script>
+    </body>
+</html>

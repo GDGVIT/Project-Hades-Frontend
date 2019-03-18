@@ -1,0 +1,543 @@
+html, body {
+    color: #555;
+    font-family: 'Lato', sans-serif;
+    font-size: 120%;
+    font-style: normal;
+    font-stretch: normal;
+    text-rendering: optimizeLegibility;
+	overflow-x: hidden;
+    letter-spacing: normal;
+}
+html{
+    background-color: #f7f7f7;
+}
+
+body {
+    background-color: #f7f7f7;
+    max-width: 1200px;
+    margin:auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 5vh;
+    background-position: right;
+    background-size: cover;
+    height: 95vh;
+}
+
+@media only screen and (max-width:480px){
+    .hd {
+        text-align: center;
+    }
+    
+    .hd2 {
+        font-size: 6vw;
+        text-align: center;
+        margin-bottom: 4vw;
+    }
+}
+
+@media only screen and (min-width:480px) and (max-width:1200px){
+    .hd, .hd2 {
+        text-align: center;
+        font-size:4vw;
+        margin-bottom: 4vw;
+    }
+}
+
+@media only screen and (min-width:1200px){
+    .hd, .hd2 {
+        text-align: center;
+        font-size:2.3vw;
+        margin-bottom: 4vw;
+    }
+}
+
+i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 3px;
+}
+
+.exsub {
+    padding: 2vw;
+    font-family: Lato, sans-serif;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+    margin-left: 15vw;
+    font-size: 4vw;
+    margin-bottom: 2vw;
+}
+
+.left {
+    transform: rotate(135deg);
+}
+
+.exsub input {
+    font-size: 4vw;
+}
+
+.radlabel {
+  display: block;
+  position: relative;
+  padding-left: 10vw;
+  margin-bottom: 2vw;
+  cursor: pointer;
+  font-size: 4vw;
+  margin-left: 20vw;
+  user-select: none;
+}
+
+.arrowbig {
+    border-width: 0 0.8vw 0.8vw 0;
+    padding: 1.5vw;
+}
+
+.radlabel input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6vw;
+  width: 6vw;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.radlabelel:hover input ~ .check {
+  background-color: #ccc;
+}
+
+.radlabel input:checked ~ .check {
+  background-color: #2c7cff;
+}
+
+.check:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radlabel input:checked ~ .check:after {
+  display: block;
+}
+
+.radlabel .check:after {
+ 	top: 1.5vw;
+	left: 1.5vw;
+	width: 3vw;
+	height: 3vw;
+	border-radius: 50%;
+	background: white;
+}
+
+.sellabel {
+  position: relative;
+  font-family: Arial;
+  margin-left:15vw;
+  margin-right:15vw;
+  margin-top: 4vw;
+  margin-bottom: 6vw;
+  font-size: 4vw;
+}
+
+.sellabel select {
+  display: none;
+}
+
+.select-selected {
+  background-color: #2c7cff;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (min-width:480px) and (max-width:800px) {
+    .exsub {
+        padding: 1vw;
+        font-family: Lato, sans-serif;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        background-color: #ffffff;
+        margin-left: 23vw;
+        font-size: 2vw;
+    }
+    
+    i {
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        margin: 3px;
+    }
+    
+    .arrowbig {
+        border-width: 0 0.3vw 0.3vw 0;
+        padding: 0.8vw;
+    }
+    
+    .exsub input {
+        font-size: 3vw;
+    }
+    
+    .radlabel {
+      display: block;
+      position: relative;
+      padding-left: 8vw;
+      margin-bottom: 2vw;
+      cursor: pointer;
+      font-size: 3vw;
+      margin-left: 23vw;
+      user-select: none;
+    }
+
+    .radlabel input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .check {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 3vw;
+      width: 3vw;
+      background-color: #eee;
+      border-radius: 50%;
+    }
+
+    .radlabelel:hover input ~ .check {
+      background-color: #ccc;
+    }
+
+    .radlabel input:checked ~ .check {
+      background-color: #2c7cff;
+    }
+
+    .check:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    .radlabel input:checked ~ .check:after {
+      display: block;
+    }
+
+    .radlabel .check:after {
+        top: 0.75vw;
+        left: 0.75vw;
+        width: 1.5vw;
+        height: 1.5vw;
+        border-radius: 50%;
+        background: white;
+    }
+
+    .sellabel {
+      position: relative;
+      font-family: Arial;
+      margin-left:20vw;
+      margin-right:20vw;
+      margin-top: 4vw;
+      margin-bottom: 6vw;
+      font-size: 3vw;
+    }
+
+    .sellabel select {
+      display: none;
+    }
+
+    .select-selected {
+      background-color: #2c7cff;
+    }
+
+    .select-selected:after {
+      position: absolute;
+      content: "";
+      top: 14px;
+      right: 10px;
+      width: 0;
+      height: 0;
+      border: 6px solid transparent;
+      border-color: #fff transparent transparent transparent;
+    }
+
+    .select-selected.select-arrow-active:after {
+      border-color: transparent transparent #fff transparent;
+      top: 7px;
+    }
+
+    .select-items div,.select-selected {
+      color: #ffffff;
+      padding: 8px 16px;
+      border: 1px solid transparent;
+      border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+      cursor: pointer;
+    }
+
+    .select-items {
+      position: absolute;
+      background-color: DodgerBlue;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 99;
+    }
+
+    .select-hide {
+      display: none;
+    }
+
+    .select-items div:hover, .same-as-selected {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media only screen and (min-width:800px) and (max-width:1200px) {
+    .exsub {
+        padding: 1vw;
+        font-family: Lato, sans-serif;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        background-color: #ffffff;
+        margin-left: 23vw;
+        font-size: 2vw;
+    }
+    
+    .exsub input {
+        font-size: 3vw;
+    }
+
+    .check {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 2vw;
+      width: 2vw;
+      background-color: #eee;
+      border-radius: 50%;
+    }
+    
+    i {
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        margin: 3px;
+    }
+    
+    .arrowbig {
+        border-width: 0 0.3vw 0.3vw 0;
+        padding: 0.8vw;
+    }
+
+    .check:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+}
+
+@media only screen and (min-width:1200px) {    
+    .exsub {
+        padding: 0.8vw;
+        font-family: Lato, sans-serif;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        background-color: #ffffff;
+        margin-left: 23vw;
+        margin-right: -15vw;
+        margin-bottom: 5vw;
+        font-size: 1.5vw;
+    }
+    
+    .exsub input {
+        font-size: 2vw;
+    }
+    
+    i {
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        margin: 3px;
+    }
+    
+    .arrowbig {
+        border-width: 0 0.2vw 0.2vw 0;
+        padding: 0.5vw;
+    }
+
+    .check {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1.5vw;
+      width: 1.5vw;
+      background-color: #eee;
+      border-radius: 50%;
+    }
+
+    .check:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+}
+
+.confirm {
+    display: none;
+    background-color: rgb(44, 124, 255);
+    color: white;
+    font-size:2vw;
+    border: 1px solid #2c7cff;
+    margin-top: 20vw;
+    position: fixed;
+    border-radius: 10px;
+    font-family: sans-serif;
+    width: 35vw;
+    left: 50%;
+    margin-left: -18vw;
+    padding:5vw 12px;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 1;
+}
+.confirm button {
+    background-color: white;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid #2c7cff;
+    padding: 1vw;
+    margin-top:2vw;
+    text-align: center;
+    width: 5vw;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+.confirm .message {
+    text-align: center;
+}
+
+@media only screen and (max-width:500px) {
+    .confirm {
+        font-size:3vw;
+        margin-top: 25vw;
+        width: 50vw;
+        margin-left: -25vw;
+        padding:4vw 4vw;
+    }
+    .confirm button {
+        padding: 1.5vw;
+        margin-top:2vw;
+        width: 10vw;
+        font-size: 2vw;
+    }
+}
+@media only screen and (min-width:1000px) {
+    .confirm {
+        border: 1px solid #2c7cff;
+        margin-top: 8vw;
+        position: fixed;
+        border-radius: 10px;
+        font-family: sans-serif;
+        left: 50%;
+        margin-left: -10vw;
+        padding:2vw 2px;
+        font-size:1vw;
+        width:20vw
+    }
+    .confirm button {
+        padding: 1vw;
+        margin-top:1vw;
+        width: 5vw;
+        font-size: 1vw;
+    }
+}
+button:focus {
+    outline: none;
+}
+a {
+    text-decoration: none;
+}
+.qrcode-text {
+  padding: 1vw;
+  margin-left: 20vw;
+  vertical-align: middle;
+  border-radius: 10px;
+  border: 1px solid #2c7cff;
+  font-size: 4vw;
+  margin-bottom: 4vw;
+}
+
+.qrcode-text + .qrcode-text-btn {
+  width: 1.7em;
+  margin-left: 2vw;
+  margin-top: 1.5vw;
+  vertical-align: top;
+}
+.qrcode-text-btn {
+  display: inline-block;
+  height: 4vw;
+  width: 4vw;
+  background: url(../qr_icon.svg) 50% 50% no-repeat;
+  cursor: pointer;
+}
+
+.qrcode-text-btn > input[type=file] {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
