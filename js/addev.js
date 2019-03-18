@@ -246,7 +246,8 @@ var queryString = decodeURIComponent(window.location.search);
                             data:input
                         }).done(function (data) {
                             if(data.rs==="created"){
-                                swal("Success!", "You have created a new event!", "success");
+                                document.getElementById("message-f1").innerHTML = 'You have created an event';
+                                functionAlert();
                             }                           
                         });
                     }
