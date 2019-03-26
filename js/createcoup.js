@@ -25,38 +25,35 @@ var queryString = decodeURIComponent(window.location.search);
                         document.getElementById('message-f1').innerHTML = 'Enter valid day.'
                         functionAlert();
                     }
-                    else {         
+                    else { 
+//                        coup=[{
+//                            "name": $('#name').val(),
+//                            "description": $('#desc').val(),
+//                            "day": $('#day').val()
+//                        }]
+                        input = JSON.stringify({                   
+                            "event": queries[1],
+                            "coupons": [{
+                                "name": $('#name').val(),
+                                "description": $('#desc').val(),
+                                "day": $('#day').val()
+                            },]
+                        })
+                        var frm = document.getElementById("create").reset();
                         $.ajax({
                             type: "POST",
-                            url: "http://206.189.133.125/api/v1/coupons/view-schema",
-                            data: JSON.stringify({"event":queries[1]})
-                        }).done(function(res){
-                            coup=res["rs"]
-                            coup.push({
-                                        "name": $('#name').val(),
-                                        "description": $('#desc').val(),
-                                        "day": $('#day').val()
-                                    })
-                            input = JSON.stringify({                   
-                                "event": queries[1],
-                                "coupons": coup
-                            })
-                            var frm = document.getElementById("create").reset();
-                            $.ajax({
-                                type: "POST",
-                                url: "http://206.189.133.125/api/v1/coupons/create-schema",
-                                data:input
-                            }).done(function (data) {
-                                if(data.rs==="created"){
-                                    document.getElementById('message-f1').innerHTML = 'You have successfully created a coupon'
-                                    functionAlert();
-                                }   
-                                else{
-                                    document.getElementById('message-f1').innerHTML = 'Sorry could not create a coupon'
-                                    functionAlert();
-                                }
-                            });
-                        })
+                            url: "http://206.189.133.125/api/v1/coupons/create-schema",
+                            data:input
+                        }).done(function (data) {
+                            if(data.rs==="created"){
+                                document.getElementById('message-f1').innerHTML = 'You have successfully created a coupon'
+                                functionAlert();
+                            }   
+                            else{
+                                document.getElementById('message-f1').innerHTML = 'Sorry could not create a coupon'
+                                functionAlert();
+                            }
+                        });
                     }
                 }
             })

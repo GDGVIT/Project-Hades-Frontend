@@ -31,6 +31,7 @@
                 </button>
             </form>
         </div>
+        <script type="text/javascript" src="js/alerts.js"></script>
         <script type="text/javascript">
             var queryString = decodeURIComponent(window.location.search);
             queryString = queryString.substring(1);
@@ -48,7 +49,32 @@
                         if(res instanceof Error) {
                             alert("No QR code found. Please make sure the QR code is within the camera's frame and try again.");
                         } else {
-                            node.parentNode.previousElementSibling.value = res;
+//                            node.parentNode.previousElementSibling.value = res;
+                            //
+
+                            input = JSON.stringify({
+                                "attendance": {
+                                    "couponName": coup[1],
+                                    "day": day[1],
+                                    "email": res,
+                                    "eventName": queries[1]
+                                }
+                            })
+                            console.log(input)
+                            $.ajax({
+                                type: "POST",
+                                url: "http://206.189.133.125/api/v1/coupons/redeem-coupon",
+                                data:input
+                            }).done(function (data) {
+//                                if(data.rs){
+//                                    alert(data.rs)
+//                                }           
+//                                else if(!data){
+//                                    alert("coupon doesn't exist")
+//                                }
+                            });
+                            
+                            //
                         }
                     };
                     qrcode.decode(reader.result);
@@ -82,8 +108,9 @@
                             data:input
                         }).done(function (data) {
                             if(data.rs){
-                                document.getElementById("message-f1").innerHTML = data.rs;
-                                functionAlert();
+//                                document.getElementById("message-f1").innerHTML = data.rs;
+//                                functionAlert();
+                                alert(data.rs)
                             }                           
                         });
 //                        console.log(input)
