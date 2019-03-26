@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/grid.css">
+		<link href="https://unpkg.com/ionicons@4.1.2/dist/css/ionicons.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <title>HADES</title>
+    </head>
+    <body>
+        <div class="row">
+            <div style="float: left; margin-left: 5vw" id="back">
+            </div>
+            <div class="row hd2"><strong>Create Guest</strong></div>
+        </div>
+        <div class="confirm" id="confirm-f1">
+                 <div class="message" id="message-f1">Enter valid name.</div>
+                 <button class="yes" id="yes-f1">OK</button>
+        </div>
+        <div class="row">
+            <form class="tform" id="createev"> 
+                
+                <div class="field r16">
+                    <input type="text" name="cgn" id="cgn" required placeholder="Iggy Azalea">
+                    <label for="cgn">Chief guest: Name</label>
+                </div>
+                <div class="field r16">
+                    <input type="text" name="cgem" id="cgem" required placeholder="amethystamelia.kelly@gmail.com">
+                    <label for="cgem">Chief guest: email</label>
+                </div>
+                <div class="field r17">
+                    <input type="text" name="cgp" id="cgp" required placeholder="9874125630">
+                    <label for="cgp">Chief guest: Phone</label>
+                </div>     
+                <div class="field r2">
+                    <input type="text" name="cgg" id="cgg" required placeholder="M/F">
+                    <label for="cgg">Chief Guest: gender</label>
+                </div>   
+                <div class="field r16">
+                    <input type="text" name="cgs" id="cgs" required placeholder="K.R.E.A.M.">
+                    <label for="cgs">Chief Guest: stake</label>
+                </div>   
+                <div class="field r15">
+                    <input type="text" name="cgl" id="cgl" required placeholder="ITC Fortune Park">
+                    <label for="cgl">Chief Guest: location of stay</label>
+                </div>                  
+                <button class="sub" type="submit" form="createev" id="load">
+                    Submit<i class="icon ion-ios-checkmark" style="border: none;"></i>
+                </button>
+                <button class="sub" type="reset" form="createev">
+                    Cancel
+                    <i class="icon ion-ios-close" style="border: none;"></i>
+                </button>
+            </form>
+        </div>
+        <script type="text/javascript" src="js/constraints.js"></script>
+        <script type="text/javascript" src="js/alerts.js"></script>
+        <script type="text/javascript" src="js/addguest.js"></script>
+    </body>
+</html>
