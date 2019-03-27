@@ -36,8 +36,8 @@ var queryString = decodeURIComponent(window.location.search);
                             "coupons": [{
                                 "name": $('#name').val(),
                                 "description": $('#desc').val(),
-                                "day": $('#day').val()
-                            },]
+                                "day": Number($('#day').val())
+                            }]
                         })
                         var frm = document.getElementById("create").reset();
                         $.ajax({
@@ -45,7 +45,8 @@ var queryString = decodeURIComponent(window.location.search);
                             url: "http://206.189.133.125/api/v1/coupons/create-schema",
                             data:input
                         }).done(function (data) {
-                            if(data.rs==="created"){
+                            console.log(data)
+                            if(data.rs==="Successfully creted coupon schema for event event"){
                                 document.getElementById('message-f1').innerHTML = 'You have successfully created a coupon'
                                 functionAlert();
                             }   

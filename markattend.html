@@ -58,7 +58,7 @@
                             else{
                                 input = JSON.stringify({
                                     "attendance": {
-                                        "day": $('#day').val(),
+                                        "day": Number($('#day').val()),
                                         "email": res,
                                         "eventName": queries[1]
                                     }
